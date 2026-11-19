@@ -7,15 +7,24 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pages.css">
   <link rel="stylesheet" href="faculty.css">
-  <link rel="stylesheet" href="polish.css">
-  <link rel="icon" href="photos/logo.jpg">
-  <link rel="stylesheet" href="cardnav.css">
-  <link rel="stylesheet" href="bouncecards.css">
 </head>
 <body>
 
-<header class="cn-host">
-  <div data-cardnav></div>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Academic Programs</a></li>
+        <li><a href="faculty.html" class="active">Faculty &amp; Staff</a></li>
+        <li><a href="services.html">Student Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <section class="page-hero">
@@ -37,193 +46,31 @@
 
 <section id="directory">
   <div class="container">
-    <div class="dir-head">
-      <div>
-        <span class="eyebrow">Faculty Directory</span>
-        <h2>Our faculty</h2>
-        <p class="lead">Our full-time faculty in the Information Technology and Computer Science departments. Hover a card to look closer.</p>
-      </div>
-      <div class="bc-wrap" aria-hidden="true">
-        <div data-bounce-cards data-bounce-cards-options='{"images":[{"src":"photos/faculty-1.svg","alt":"Faculty photo 1 [PLACEHOLDER]"},{"src":"photos/faculty-2.svg","alt":"Faculty photo 2 [PLACEHOLDER]"},{"src":"photos/faculty-3.svg","alt":"Faculty photo 3 [PLACEHOLDER]"},{"src":"photos/faculty-4.svg","alt":"Faculty photo 4 [PLACEHOLDER]"},{"src":"photos/faculty-5.svg","alt":"Faculty photo 5 [PLACEHOLDER]"}],"containerWidth":440,"containerHeight":300,"cardSize":160,"spread":72,"rotation":10,"arc":0,"pushDistance":140,"hoverScale":1.06,"bounciness":0.6,"animationDelay":0.5,"animationStagger":0.06,"borderWidth":5,"borderColor":"#ffffff","radius":22,"shadow":true,"enableHover":true}'></div>
-      </div>
+    <span class="eyebrow">Faculty Directory</span>
+    <h2>Our faculty</h2>
+    <p class="lead">Search by name or degree, filter by program or highest degree, and tap a card to see full credentials.</p>
+
+    <div class="fac-tools">
+      <div class="search"><input id="q" type="search" placeholder="Search name or degree…" aria-label="Search faculty"></div>
     </div>
-    <div class="filters" role="group" aria-label="Filter by department">
-      <button class="on" data-f="all">All (17)</button>
-      <button data-f="IT">Information Technology (10)</button>
-      <button data-f="CS">Computer Science (7)</button>
+    <div class="filter-row">
+      <div><span class="lbl">Program</span>
+        <div class="filters" role="group" aria-label="Filter by program">
+          <button class="on" data-prog-btn="all">All</button>
+          <button data-prog-btn="CS">Computer Science</button>
+          <button data-prog-btn="IT">Information Technology</button>
+        </div></div>
+      <div><span class="lbl">Highest degree</span>
+        <div class="filters" role="group" aria-label="Filter by degree">
+          <button class="on" data-lvl-btn="all">All</button>
+          <button data-lvl-btn="Doctorate">Doctorate</button>
+          <button data-lvl-btn="Master's">Master's</button>
+          <button data-lvl-btn="Bachelor's">Bachelor's</button>
+        </div></div>
     </div>
-    <div class="fac-grid">
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Sir Paulino Gatpandan">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Sir Paulino Gatpandan</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Evangeline Pamintuan">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Evangeline Pamintuan</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Sherry Naz">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Sherry Naz</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Azenith Mojica">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Azenith Mojica</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Maria Del Rosario">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Maria Del Rosario</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Marivic Mitschek">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Marivic Mitschek</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Roda Sanares">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Roda Sanares</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Emelyn Mayuga">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Emelyn Mayuga</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Sir Juanito Doctor Jr.">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Sir Juanito Doctor Jr.</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Rochelle Sermana">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Rochelle Sermana</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Dr. Rolando Barrameda">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Dr. Rolando Barrameda</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Josephine Eduardo">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Josephine Eduardo</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Sheryl Kamantigue">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Sheryl Kamantigue</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Tita Herradura">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Tita Herradura</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Jennylinde Manaois">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Jennylinde Manaois</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Marnelli Erquita">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Marnelli Erquita</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Dr. Maryli Rosas">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Dr. Maryli Rosas</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-    </div>
+    <div class="fac-count" id="facCount"></div>
+    <div class="fac-grid"></div>
+    <div class="empty"><h3>No faculty match your search</h3><p>Try a different name or clear the filters.</p></div>
   </div>
 </section>
 
@@ -233,10 +80,10 @@
     <h2>Behind the scenes</h2>
     <p class="lead">The team that keeps the college running, with their roles and responsibilities.</p>
     <div class="staff-grid">
-      <div class="staff"><div class="av">RA</div><div><h3>[PLACEHOLDER]</h3><div class="pos">Registrar Assistant</div><ul><li>Maintains student records</li><li>Assists with enrollment and registration</li><li>Issues certifications and clearances</li></ul></div></div>
-      <div class="staff"><div class="av">DS</div><div><h3>[PLACEHOLDER]</h3><div class="pos">Department Secretary</div><ul><li>Manages correspondence and schedules</li><li>Coordinates meetings and events</li><li>Handles inquiries from students and visitors</li></ul></div></div>
-      <div class="staff"><div class="av">LT</div><div><h3>[PLACEHOLDER]</h3><div class="pos">Laboratory Technician</div><ul><li>Maintains computers and equipment</li><li>Supports lab sessions and bookings</li><li>Enforces laboratory policies</li></ul></div></div>
-      <div class="staff"><div class="av">OC</div><div><h3>[PLACEHOLDER]</h3><div class="pos">OJT Coordinator</div><ul><li>Matches students with partner companies</li><li>Monitors OJT progress</li><li>Processes OJT forms and requirements</li></ul></div></div>
+      <div class="staff"><div class="av">RA</div><div><h3>[Staff Name 1]</h3><div class="pos">Registrar Assistant</div><ul><li>Maintains student records</li><li>Assists with enrollment and registration</li><li>Issues certifications and clearances</li></ul></div></div>
+      <div class="staff"><div class="av">DS</div><div><h3>[Staff Name 2]</h3><div class="pos">Department Secretary</div><ul><li>Manages correspondence and schedules</li><li>Coordinates meetings and events</li><li>Handles inquiries from students and visitors</li></ul></div></div>
+      <div class="staff"><div class="av">LT</div><div><h3>[Staff Name 3]</h3><div class="pos">Laboratory Technician</div><ul><li>Maintains computers and equipment</li><li>Supports lab sessions and bookings</li><li>Enforces laboratory policies</li></ul></div></div>
+      <div class="staff"><div class="av">OC</div><div><h3>[Staff Name 4]</h3><div class="pos">OJT Coordinator</div><ul><li>Matches students with partner companies</li><li>Monitors OJT progress</li><li>Processes OJT forms and requirements</li></ul></div></div>
     </div>
   </div>
 </section>
@@ -247,66 +94,20 @@
     <h2>Where ideas get built</h2>
     <p class="lead">Specialized labs and research groups for hands-on learning and discovery.</p>
     <div class="lab-grid">
-      <div class="lab"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><h3>AI Lab</h3><p>Research and projects in machine learning, computer vision, and natural language processing. [PLACEHOLDER]</p><div class="meta"><span>GPU workstations</span><span>Datasets</span><span>Thesis support</span></div><div class="lead-by">Lab head: [PLACEHOLDER]</div></div>
-      <div class="lab"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14 0M1.4 9a16 16 0 0 1 21.2 0M8.5 16.1a6 6 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div><h3>Networking Lab</h3><p>Hands-on training in network design, routing, switching, and security. [PLACEHOLDER]</p><div class="meta"><span>Routers &amp; switches</span><span>Cisco / Packet Tracer</span><span>Cabling kits</span></div><div class="lead-by">Lab head: [PLACEHOLDER]</div></div>
-      <div class="lab"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Software Development Lab</h3><p>Collaborative space for web, mobile, and software engineering projects. [PLACEHOLDER]</p><div class="meta"><span>Dev workstations</span><span>Agile tools</span><span>Capstone projects</span></div><div class="lead-by">Lab head: [PLACEHOLDER]</div></div>
+      <div class="lab"><div class="ic">🤖</div><h3>AI Lab</h3><p>Research and projects in machine learning, computer vision, and natural language processing. [Edit as needed.]</p><div class="meta"><span>GPU workstations</span><span>Datasets</span><span>Thesis support</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
+      <div class="lab"><div class="ic">📡</div><h3>Networking Lab</h3><p>Hands-on training in network design, routing, switching, and security. [Edit as needed.]</p><div class="meta"><span>Routers &amp; switches</span><span>Cisco / Packet Tracer</span><span>Cabling kits</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
+      <div class="lab"><div class="ic">💻</div><h3>Software Development Lab</h3><p>Collaborative space for web, mobile, and software engineering projects. [Edit as needed.]</p><div class="meta"><span>Dev workstations</span><span>Agile tools</span><span>Capstone projects</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
     </div>
   </div>
 </section>
 
-<footer class="foot">
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <a href="index.html" class="logo"><i class="logo-mark"><img src="photos/logo.jpg" alt="CICS seal, De La Salle University-Dasmariñas"></i><div>CI<span>CS</span></div></a>
-        <p>College of Information and Computer Studies, De La Salle University-Dasmariñas. A leader in technological education.</p>
-        <div class="foot-social">
-          <a href="https://www.facebook.com/DLSUD.CICSSG" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/dlsud.cicssg/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        </div>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="programs.html">Academic Programs</a></li>
-          <li><a href="faculty.html">Faculty &amp; Staff</a></li>
-          <li><a href="services.html">Student Services</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>Room 312, Paulo Campos Hall<br>De La Salle University-Dasmariñas<br>Dasmariñas City, Cavite 4115</li>
-          <li><a href="mailto:itdchair@dlsud.edu.ph">itdchair@dlsud.edu.ph</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Get started</h4>
-        <ul>
-          <li><a href="programs.html#eligibility">Who can apply</a></li>
-          <li><a href="services.html#enrollment">Enrollment guide</a></li>
-          <li><a href="services.html#forms">Downloadable forms</a></li>
-          <li><a href="contact.html#inquiry">Send an inquiry</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
-  </div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Faculty profile"><div class="modal-box"></div></div>
+
+<footer>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
-<script>
-const btns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('.fac');
-btns.forEach(b=>b.addEventListener('click',()=>{
-  btns.forEach(x=>x.classList.toggle('on',x===b));
-  cards.forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.field!==b.dataset.f));
-}));
-document.querySelectorAll('section:not(.page-hero) .container > *, .staff, .lab').forEach(e=>e.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
-<script src="bouncecards.js"></script>
-<script src="cardnav.js"></script>
-<script src="polish.js"></script>
+<script src="script.js"></script>
+<script src="faculty.js"></script>
 </body>
 </html>

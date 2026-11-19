@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>College of Information and Computer Studies</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="polish.css">
-  <link rel="icon" href="photos/logo.jpg">
-  <link rel="stylesheet" href="border-glow.css">
-  <link rel="stylesheet" href="cardnav.css">
 </head>
 <body>
 
-<header class="cn-host">
-  <div data-cardnav></div>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Academic Programs</a></li>
+        <li><a href="faculty.html">Faculty &amp; Staff</a></li>
+        <li><a href="services.html">Student Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <!-- 1. College Banner -->
@@ -21,30 +30,31 @@
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">College of Information and Computer Studies</span>
-      <h1 class="fz-title" aria-label="Innovate. Code. Lead the Digital Future.">
-        <span class="fz-line" id="fz1">Innovate. Code.</span>
-        <span class="fz-line" id="fz2">Lead the Digital</span>
-        <span class="fz-line" id="fz3">Future.</span>
-      </h1>
-      <p>A leader in technological education, committed to academic excellence, innovation, and high ethical standards.</p>
+      <h1>Power the digital world with <em><span data-typed="innovation.|code.|intelligence.|creativity.">innovation.</span></em></h1>
+      <p>Grounded in Lasallian values, CICS inspires and empowers future IT leaders to excel in their professions and shape a better global digital landscape.</p>
       <div class="hero-actions"><a href="#about" class="btn btn-primary">Learn More →</a><a href="programs.html" class="btn btn-outline">Explore Programs</a></div>
     </div>
     <div class="hero-visual">
       <div class="hero-img" role="img" aria-label="Featured college image">
         <div class="code-window">
           <div class="dots"><b></b><b></b><b></b></div>
-          <div><span class="c">// future.js</span></div>
-          <div><span class="k">const</span> <span class="f">student</span> = <span class="k">new</span> <span class="f">CICS</span>();</div>
-          <div>student.<span class="f">learn</span>(<span class="s">"AI, Web, Systems"</span>);</div>
-          <div>student.<span class="f">build</span>(<span class="s">"the future"</span>);</div>
-          <div><span class="k">return</span> <span class="s">"Graduate"</span>;</div>
+          <div class="code-line" style="animation-delay:.3s"><span class="c">// future.js</span></div>
+          <div class="code-line" style="animation-delay:.9s"><span class="k">const</span> <span class="f">student</span> = <span class="k">new</span> <span class="f">CICS</span>();</div>
+          <div class="code-line" style="animation-delay:1.5s">student.<span class="f">learn</span>(<span class="s">"AI, Games, Networks, Web"</span>);</div>
+          <div class="code-line" style="animation-delay:2.1s">student.<span class="f">build</span>(<span class="s">"the future"</span>);</div>
+          <div class="code-line" style="animation-delay:2.7s"><span class="k">return</span> <span class="s">"Graduate"</span>;</div>
         </div>
       </div>
-      <div class="float b"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><div>Award-winning<small>Student teams</small></div></div>
-      <div class="float a"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div>Industry-ready<small>Partner internships</small></div></div>
+      <div class="float b"><div class="ic">🏆</div><div>Leading Innovation<small>Pioneering Excellence</small></div></div>
+      <div class="float a"><div class="ic">💼</div><div>Industry-ready<small>Partner internships</small></div></div>
     </div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Leading Innovation</span><span>✦</span><span>Pioneering Excellence</span><span>✦</span><span>Lasallian Values</span><span>✦</span><span>Computer Science</span><span>✦</span><span>Information Technology</span><span>✦</span>
+  <span>Leading Innovation</span><span>✦</span><span>Pioneering Excellence</span><span>✦</span><span>Lasallian Values</span><span>✦</span><span>Computer Science</span><span>✦</span><span>Information Technology</span><span>✦</span>
+</div></div>
 
 <!-- 2. About the College -->
 <section id="about">
@@ -52,14 +62,14 @@
     <div>
       <span class="eyebrow">About the College</span>
       <h2>Academic excellence in computing</h2>
-      <p class="lead" style="margin-bottom:20px">We aim to become a leader in information and computer studies, noted for academic excellence, pioneering research, and significant community involvement. We equip students with a thorough understanding, innovative capabilities, and strong ethical foundations.</p>
+      <p class="lead" style="margin-bottom:20px">The College of Information and Computer Studies (CICS) is a leader in technological education, committed to academic excellence, innovation, and high ethical standards. Students, faculty, and industry partners collaborate in a dynamic and inclusive environment to solve complex technological challenges.</p>
       <a href="about.html" class="btn btn-blue">Read Our Story</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>2</b><span>Degree programs</span></div>
-      <div class="stat"><b>2</b><span>Departments</span></div>
-      <div class="stat"><b>PAASCU</b><span>Accredited programs</span></div>
-      <div class="stat"><b>CHED</b><span>Center of Development in IT (BSIT)</span></div>
+      <div class="stat"><b data-count="2">2</b><span>Degree programs</span></div>
+      <div class="stat"><b data-count="31" data-suffix="+">31+</b><span>Expert faculty</span></div>
+      <div class="stat"><b data-count="4">4</b><span>Tracks &amp; specializations</span></div>
+      <div class="stat"><b data-count="4">4</b><span>Doctorate-holding faculty</span></div>
     </div>
   </div>
 </section>
@@ -71,10 +81,10 @@
     <h2>Find your path</h2>
     <p class="lead">Explore our degree programs and choose the track that fits your goals.</p>
     <div class="prog-grid">
-      <div class="prog-card" data-border-glow data-border-glow-options='{"glowColor":"145 75 62","backgroundColor":"#08241a","borderRadius":20,"glowRadius":30,"glowIntensity":1,"coneSpread":25,"colors":["#1fb26b","#6ee7a8","#ffc233"]}'><a class="prog" href="programs.html#bsit"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>BSIT</h3><p>Bachelor of Science in Information Technology</p><span class="more">View program →</span></a></div>
-      <div class="prog-card" data-border-glow data-border-glow-options='{"glowColor":"145 75 62","backgroundColor":"#08241a","borderRadius":20,"glowRadius":30,"glowIntensity":1,"coneSpread":25,"colors":["#1fb26b","#6ee7a8","#ffc233"]}'><a class="prog" href="programs.html#bscs"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3>BSCS</h3><p>Bachelor of Science in Computer Science</p><span class="more">View program →</span></a></div>
-      <div class="prog-card" data-border-glow data-border-glow-options='{"glowColor":"145 75 62","backgroundColor":"#08241a","borderRadius":20,"glowRadius":30,"glowIntensity":1,"coneSpread":25,"colors":["#1fb26b","#6ee7a8","#ffc233"]}'><a class="prog" href="programs.html#tracks"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div><h3>Tracks</h3><p>Network, Software, Robotics, and Mobile and Game Development</p><span class="more">View tracks →</span></a></div>
-      <div class="prog-card" data-border-glow data-border-glow-options='{"glowColor":"145 75 62","backgroundColor":"#08241a","borderRadius":20,"glowRadius":30,"glowIntensity":1,"coneSpread":25,"colors":["#1fb26b","#6ee7a8","#ffc233"]}'><a class="prog" href="programs.html#eligibility"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><h3>Who Can Apply</h3><p>Freshmen, transferees, and second-course takers</p><span class="more">See eligibility →</span></a></div>
+      <a class="prog" href="programs.html#bsit"><div class="ic">💻</div><h3>BSIT</h3><p>Bachelor of Science in Information Technology</p><span class="more">View program →</span></a>
+      <a class="prog" href="programs.html#bscs"><div class="ic">🧠</div><h3>BSCS</h3><p>Bachelor of Science in Computer Science</p><span class="more">View program →</span></a>
+      <a class="prog" href="programs.html#tracks"><div class="ic">🎮</div><h3>Game Development</h3><p>BSCS with Specialization in Game Development</p><span class="more">View track →</span></a>
+      <a class="prog" href="programs.html#tracks"><div class="ic">🤖</div><h3>Intelligent Systems</h3><p>BSCS with Specialization in Intelligent Systems (AI)</p><span class="more">View track →</span></a>
     </div>
   </div>
 </section>
@@ -84,12 +94,19 @@
   <div class="container">
     <span class="eyebrow">Announcements &amp; Events</span>
     <h2>What's happening</h2>
-    <p class="lead">Latest updates, deadlines, seminars, and competitions.</p>
+    <p class="lead">Latest updates, deadlines, seminars, and competitions. Tap a filter to focus.</p>
+    <div class="filters" data-filter-group=".ann-grid .card">
+      <button class="on" data-filter="all">All</button>
+      <button data-filter="update">Updates</button>
+      <button data-filter="deadline">Deadlines</button>
+      <button data-filter="seminar">Seminars</button>
+      <button data-filter="competition">Competitions</button>
+    </div>
     <div class="ann-grid">
-      <article class="card"><span class="tag">Update</span><h3>[PLACEHOLDER]</h3><time>[PLACEHOLDER]</time></article>
-      <article class="card deadline"><span class="tag">Deadline</span><h3>[PLACEHOLDER]</h3><time>[PLACEHOLDER]</time></article>
-      <article class="card"><span class="tag">Seminar</span><h3>[PLACEHOLDER]</h3><time>[PLACEHOLDER]</time></article>
-      <article class="card"><span class="tag">Competition</span><h3>[PLACEHOLDER]</h3><time>[PLACEHOLDER]</time></article>
+      <article class="card" data-cat="update"><span class="tag">Update</span><h3>[Announcement title]</h3><time>Month DD, YYYY</time></article>
+      <article class="card deadline" data-cat="deadline"><span class="tag">Deadline</span><h3>[Enrollment / submission deadline]</h3><time>Month DD, YYYY</time></article>
+      <article class="card" data-cat="seminar"><span class="tag">Seminar</span><h3>[Seminar or workshop title]</h3><time>Month DD, YYYY</time></article>
+      <article class="card" data-cat="competition"><span class="tag">Competition</span><h3>[Hackathon / programming contest]</h3><time>Month DD, YYYY</time></article>
     </div>
   </div>
 </section>
@@ -101,10 +118,10 @@
     <h2>Proud of our students</h2>
     <p class="lead">Awards, certifications, and competition wins that showcase our community.</p>
     <div class="ach-grid">
-      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><h3>[PLACEHOLDER]</h3><p>[PLACEHOLDER]</p></div>
-      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><h3>[PLACEHOLDER]</h3><p>[PLACEHOLDER]</p></div>
-      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>[PLACEHOLDER]</h3><p>[PLACEHOLDER]</p></div>
-      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><h3>[PLACEHOLDER]</h3><p>[PLACEHOLDER]</p></div>
+      <div class="ach-item"><div class="icon">🏆</div><h3>[Award title]</h3><p>[Student / team name, year]</p></div>
+      <div class="ach-item"><div class="icon">🎓</div><h3>[Certification]</h3><p>[Number of students certified]</p></div>
+      <div class="ach-item"><div class="icon">💻</div><h3>[Programming competition]</h3><p>[Placement, event, year]</p></div>
+      <div class="ach-item"><div class="icon">🤖</div><h3>[Robotics / research recognition]</h3><p>[Details]</p></div>
     </div>
   </div>
 </section>
@@ -122,69 +139,10 @@
   </div>
 </section>
 
-<footer class="foot">
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <a href="index.html" class="logo"><i class="logo-mark"><img src="photos/logo.jpg" alt="CICS seal, De La Salle University-Dasmariñas"></i><div>CI<span>CS</span></div></a>
-        <p>College of Information and Computer Studies, De La Salle University-Dasmariñas. A leader in technological education.</p>
-        <div class="foot-social">
-          <a href="https://www.facebook.com/DLSUD.CICSSG" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/dlsud.cicssg/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        </div>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="programs.html">Academic Programs</a></li>
-          <li><a href="faculty.html">Faculty &amp; Staff</a></li>
-          <li><a href="services.html">Student Services</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>Room 312, Paulo Campos Hall<br>De La Salle University-Dasmariñas<br>Dasmariñas City, Cavite 4115</li>
-          <li><a href="mailto:itdchair@dlsud.edu.ph">itdchair@dlsud.edu.ph</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Get started</h4>
-        <ul>
-          <li><a href="programs.html#eligibility">Who can apply</a></li>
-          <li><a href="services.html#enrollment">Enrollment guide</a></li>
-          <li><a href="services.html#forms">Downloadable forms</a></li>
-          <li><a href="contact.html#inquiry">Send an inquiry</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
-  </div>
+<footer>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
-<script>
-const els=document.querySelectorAll('section .container > *, .stat, .prog, .card, .ach-item');
-els.forEach(e=>{if(!e.closest('.hero'))e.classList.add('reveal')});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
-<script src="fuzzy-text.js"></script>
-<script>
-  // Hero headline: one FuzzyText canvas per line, so each line can have its own colors.
-  (function () {
-    var base = {
-      fontSize: 'clamp(2.5rem, 5.4vw, 4.3rem)', fontWeight: 800, fontFamily: 'Sora, sans-serif',
-      fuzzRange: 16, baseIntensity: 0.15, hoverIntensity: 0.5, direction: 'horizontal',
-      sliceSize: 1, fps: 60, trigger: 'hover', intro: true, introDuration: 1400
-    };
-    FuzzyText(document.getElementById('fz1'), 'Innovate. Code.', Object.assign({}, base, { color: '#ffffff' }));
-    FuzzyText(document.getElementById('fz2'), 'Lead the Digital', Object.assign({}, base, { gradient: ['#6ee7a8', '#a7f3c4', '#d9e58a'] }));
-    FuzzyText(document.getElementById('fz3'), 'Future.', Object.assign({}, base, { gradient: ['#d9e58a', '#ffc233'] }));
-  })();
-</script>
-<script src="border-glow.js"></script>
-<script src="cardnav.js"></script>
-<script src="polish.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
