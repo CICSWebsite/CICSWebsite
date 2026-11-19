@@ -51,8 +51,8 @@
     <h2>Reach the college office</h2>
     <p class="lead">Choose the way that works best for you.</p>
     <div class="info-grid">
-      <div class="info"><div class="ic">✉️</div><h3>Email address</h3><a href="mailto:cics@example.edu">cics@example.edu</a><p>[Admissions email, if different]</p></div>
-      <div class="info"><div class="ic">📞</div><h3>Office phone numbers</h3><a href="tel:+000000000">(000) 000-0000</a><a href="tel:+000000000">(000) 000-0000</a></div>
+      <div class="info"><div class="ic">✉️</div><h3>Email address</h3><a href="mailto:itdchair@dlsud.edu.ph">itdchair@dlsud.edu.ph</a><a href="mailto:cicssg@dlsud.edu.ph">cicssg@dlsud.edu.ph</a><p>The second address is the CICS Student Government.</p></div>
+      <div class="info"><div class="ic">📞</div><h3>Office phone numbers</h3><a href="tel:+63464811900">Cavite: +63 (46) 481.1900</a><a href="tel:+63287795180">Manila: +63 (2) 8779.5180</a><p>Local number: 3073</p></div>
       <div class="info"><div class="ic">🕘</div><h3>Office hours</h3><p>Monday to Friday: [8:00 AM to 5:00 PM]</p><p>Saturday: [Hours or Closed]</p></div>
     </div>
   </div>
@@ -66,12 +66,12 @@
     <div class="map-wrap">
       <div class="address">
         <h3>College of Information and Computer Studies</h3>
-        <p>[Building / Room]<br>[Street Address]<br>[City, Province, Postal Code]</p>
-        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Your+Campus+Address" target="_blank" rel="noopener">Get Directions →</a>
+        <p>Room 312, Paulo Campos Hall<br>De La Salle University-Dasmariñas<br>Brgy. Fatima 1, Dasmariñas City, Cavite 4115</p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=De+La+Salle+University+Dasmari%C3%B1as" target="_blank" rel="noopener">Get Directions →</a>
       </div>
       <!-- Replace the src with the Embed link from Google Maps: Share > Embed a map -->
       <div class="map">
-        <iframe title="Campus map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Your+Campus+Address&output=embed"></iframe>
+        <iframe title="Campus map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=De+La+Salle+University+Dasmari%C3%B1as&output=embed"></iframe>
       </div>
     </div>
   </div>
@@ -100,9 +100,8 @@
     <h2>Stay connected</h2>
     <p class="lead">Follow the college for news, events, and student stories.</p>
     <div class="social">
-      <a class="soc fb" href="#" target="_blank" rel="noopener"><div class="ic">f</div><div><b>Facebook</b><small>[Page name]</small></div></a>
-      <a class="soc yt" href="#" target="_blank" rel="noopener"><div class="ic">▶</div><div><b>YouTube</b><small>[Channel name]</small></div></a>
-      <a class="soc li" href="#" target="_blank" rel="noopener"><div class="ic">in</div><div><b>LinkedIn</b><small>[If available]</small></div></a>
+      <a class="soc fb" href="https://www.facebook.com/DLSUD.CICSSG" target="_blank" rel="noopener"><div class="ic">f</div><div><b>Facebook</b><small>@DLSUD.CICSSG</small></div></a>
+      <a class="soc ig" href="https://www.instagram.com/dlsud.cicssg/" target="_blank" rel="noopener"><div class="ic">IG</div><div><b>Instagram</b><small>@dlsud.cicssg</small></div></a>
     </div>
   </div>
 </section>
@@ -119,7 +118,7 @@ document.getElementById('inquiryForm').addEventListener('submit', e => {
   const f = e.target;
   const body = encodeURIComponent('Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\n\n' + f.message.value);
   document.getElementById('sent').classList.add('show');
-  window.location.href = 'mailto:cics@example.edu?subject=' + encodeURIComponent('Website inquiry from ' + f.name.value) + '&body=' + body;
+  window.location.href = 'mailto:itdchair@dlsud.edu.ph?subject=' + encodeURIComponent('Website inquiry from ' + f.name.value) + '&body=' + body;
   f.reset();
 });
 document.querySelectorAll('section:not(.page-hero) .container > *, .info, .soc').forEach(e=>e.classList.add('reveal'));

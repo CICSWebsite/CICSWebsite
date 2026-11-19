@@ -35,3 +35,5 @@ form.inquiry .btn { justify-content: center; width: 100%; }
 .soc small { color: var(--muted); }
 
 @media (max-width: 900px) { .map-wrap, .form-wrap { grid-template-columns: 1fr; } form.inquiry { padding: 24px; } }
+
+.soc.ig .ic { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); }
