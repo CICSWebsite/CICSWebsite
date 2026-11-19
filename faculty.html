@@ -7,28 +7,14 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pages.css">
   <link rel="stylesheet" href="faculty.css">
-  <link rel="stylesheet" href="polish.css">
   <link rel="icon" href="photos/logo.jpg">
-  <link rel="stylesheet" href="cardnav.css">
   <link rel="stylesheet" href="holocard.css">
+  <link rel="stylesheet" href="cardnav.css">
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Academic Programs</a></li>
-        <li><a href="faculty.html" class="active">Faculty &amp; Staff</a></li>
-        <li><a href="services.html">Student Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="cn-host">
+  <div data-cardnav></div>
 </header>
 
 <section class="page-hero">
@@ -52,7 +38,7 @@
   <div class="container">
     <span class="eyebrow">Faculty Directory</span>
     <h2>Our faculty</h2>
-    <p class="lead">Search by name or degree, filter by program or highest degree, and tap a card to see full credentials.</p>
+    <p class="lead">Search by name or degree, filter by program or highest degree. Hover a card to make it shine, click it to see full credentials.</p>
 
     <div class="fac-tools">
       <div class="search"><input id="q" type="search" placeholder="Search name or degree…" aria-label="Search faculty"></div>
@@ -71,187 +57,10 @@
           <button data-lvl-btn="Master's">Master's</button>
           <button data-lvl-btn="Bachelor's">Bachelor's</button>
         </div></div>
-    <p class="lead">Our full-time faculty in the Information Technology and Computer Science departments.</p>
-    <div class="filters" role="group" aria-label="Filter by department">
-      <button class="on" data-f="all">All (17)</button>
-      <button data-f="IT">Information Technology (10)</button>
-      <button data-f="CS">Computer Science (7)</button>
-    </div>
-    <div class="hc-grid" id="hcGrid"></div>
-    <p class="hc-hint">Hover over a card to make it shine. Click it to see it up close.</p>
-    <div class="fac-grid">
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Sir Paulino Gatpandan">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Sir Paulino Gatpandan</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Evangeline Pamintuan">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Evangeline Pamintuan</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Sherry Naz">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Sherry Naz</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Azenith Mojica">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Azenith Mojica</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Maria Del Rosario">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Maria Del Rosario</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Marivic Mitschek">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Marivic Mitschek</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Roda Sanares">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Roda Sanares</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Emelyn Mayuga">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Emelyn Mayuga</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Sir Juanito Doctor Jr.">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Sir Juanito Doctor Jr.</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="IT">
-        <div class="pic" role="img" aria-label="Photo of Ms. Rochelle Sermana">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Rochelle Sermana</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Information Technology</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Dr. Rolando Barrameda">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Dr. Rolando Barrameda</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Josephine Eduardo">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Josephine Eduardo</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Sheryl Kamantigue">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Sheryl Kamantigue</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Tita Herradura">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Tita Herradura</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Jennylinde Manaois">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Jennylinde Manaois</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Ms. Marnelli Erquita">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Ms. Marnelli Erquita</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="CS">
-        <div class="pic" role="img" aria-label="Photo of Dr. Maryli Rosas">[PLACEHOLDER]</div>
-        <div class="info">
-          <h3>Dr. Maryli Rosas</h3>
-          <div class="pos">[PLACEHOLDER]</div>
-          <span class="field">Computer Science</span>
-          <p>[PLACEHOLDER]</p>
-          <div class="int"><b>Research interests:</b> [PLACEHOLDER]</div>
-        </div>
-      </article>
     </div>
     <div class="fac-count" id="facCount"></div>
+    <div class="hc-grid" id="hcGrid"></div>
+    <p class="hc-hint">Hover over a card to make it shine. Click it to see full credentials.</p>
     <div class="fac-grid"></div>
     <div class="empty"><h3>No faculty match your search</h3><p>Try a different name or clear the filters.</p></div>
   </div>
@@ -277,21 +86,14 @@
     <h2>Where ideas get built</h2>
     <p class="lead">Specialized labs and research groups for hands-on learning and discovery.</p>
     <div class="lab-grid">
-      <div class="lab"><div class="ic">🤖</div><h3>AI Lab</h3><p>Research and projects in machine learning, computer vision, and natural language processing. [Edit as needed.]</p><div class="meta"><span>GPU workstations</span><span>Datasets</span><span>Thesis support</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
-      <div class="lab"><div class="ic">📡</div><h3>Networking Lab</h3><p>Hands-on training in network design, routing, switching, and security. [Edit as needed.]</p><div class="meta"><span>Routers &amp; switches</span><span>Cisco / Packet Tracer</span><span>Cabling kits</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
-      <div class="lab"><div class="ic">💻</div><h3>Software Development Lab</h3><p>Collaborative space for web, mobile, and software engineering projects. [Edit as needed.]</p><div class="meta"><span>Dev workstations</span><span>Agile tools</span><span>Capstone projects</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
+      <div class="lab"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><h3>AI Lab</h3><p>Research and projects in machine learning, computer vision, and natural language processing. [Edit as needed.]</p><div class="meta"><span>GPU workstations</span><span>Datasets</span><span>Thesis support</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
+      <div class="lab"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14 0M1.4 9a16 16 0 0 1 21.2 0M8.5 16.1a6 6 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div><h3>Networking Lab</h3><p>Hands-on training in network design, routing, switching, and security. [Edit as needed.]</p><div class="meta"><span>Routers &amp; switches</span><span>Cisco / Packet Tracer</span><span>Cabling kits</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
+      <div class="lab"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Software Development Lab</h3><p>Collaborative space for web, mobile, and software engineering projects. [Edit as needed.]</p><div class="meta"><span>Dev workstations</span><span>Agile tools</span><span>Capstone projects</span></div><div class="lead-by">Lab head: [Faculty Name]</div></div>
     </div>
   </div>
 </section>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Faculty profile"><div class="modal-box"></div></div>
-
-<footer>
-  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
-</footer>
-
-<script src="script.js"></script>
-<script src="faculty.js"></script>
 <div class="holo-modal" id="holoModal" role="dialog" aria-modal="true" aria-label="Faculty card" aria-hidden="true">
   <button type="button" class="holo-close" id="holoClose" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
   <div class="holo-panel">
@@ -300,228 +102,16 @@
   </div>
 </div>
 
-<footer class="foot">
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <a href="index.html" class="logo"><i class="logo-mark"><img src="photos/logo.jpg" alt="CICS seal, De La Salle University-Dasmariñas"></i><div>CI<span>CS</span></div></a>
-        <p>College of Information and Computer Studies, De La Salle University-Dasmariñas. A leader in technological education.</p>
-        <div class="foot-social">
-          <a href="https://www.facebook.com/DLSUD.CICSSG" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/dlsud.cicssg/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        </div>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="programs.html">Academic Programs</a></li>
-          <li><a href="faculty.html">Faculty &amp; Staff</a></li>
-          <li><a href="services.html">Student Services</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>Room 312, Paulo Campos Hall<br>De La Salle University-Dasmariñas<br>Dasmariñas City, Cavite 4115</li>
-          <li><a href="mailto:itdchair@dlsud.edu.ph">itdchair@dlsud.edu.ph</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Get started</h4>
-        <ul>
-          <li><a href="programs.html#eligibility">Who can apply</a></li>
-          <li><a href="services.html#enrollment">Enrollment guide</a></li>
-          <li><a href="services.html#forms">Downloadable forms</a></li>
-          <li><a href="contact.html#inquiry">Send an inquiry</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
-  </div>
+
+<footer>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
-<script>
-const btns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('.fac');
-btns.forEach(b=>b.addEventListener('click',()=>{
-  btns.forEach(x=>x.classList.toggle('on',x===b));
-  cards.forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.field!==b.dataset.f));
-}));
-document.querySelectorAll('section:not(.page-hero) .container > *, .staff, .lab').forEach(e=>e.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
-
+<script src="script.js"></script>
 <script src="holocard.js"></script>
-<script>
-  // Faculty directory: a grid of holographic cards. Each card is a plain image until hovered, focused or
-  // tapped, so only a few WebGL contexts exist at once (browsers allow about 16 per page).
-  (function () {
-    var dir = document.getElementById('directory');
-    var grid = document.getElementById('hcGrid');
-    if (!dir || !grid || !window.HoloCard) return;
+<script src="faculty.js"></script>
 
-    // Needs WebGL2; otherwise the plain card grid stays visible.
-    var probe = document.createElement('canvas').getContext('webgl2');
-    if (!probe) return;
-    var lose = probe.getExtension('WEBGL_lose_context');
-    if (lose) lose.loseContext();
 
-    function esc(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-
-    // Card art as an SVG data URI (630x880 = 63:88 card ratio). Add data-card="..." to a card to use a real image.
-    function cardArt(p) {
-      var c = p.dept === 'IT' ? ['#12b86a', '#06361f'] : ['#0c8a4c', '#04170f'];
-      var size = Math.max(26, Math.min(44, Math.floor(520 / (p.name.length * 0.56))));
-      var f = 'font-family="Arial, Helvetica, sans-serif"';
-      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="630" height="880" viewBox="0 0 630 880">' +
-        '<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + c[0] + '"/><stop offset="1" stop-color="' + c[1] + '"/></linearGradient>' +
-        '<linearGradient id="art" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f7a4d"/><stop offset="1" stop-color="#06361f"/></linearGradient></defs>' +
-        '<rect width="630" height="880" fill="#d4dae0"/>' +
-        '<rect x="26" y="26" width="578" height="828" rx="14" fill="url(#bg)"/>' +
-        '<text x="315" y="100" text-anchor="middle" ' + f + ' font-size="' + size + '" font-weight="700" fill="#ffffff">' + esc(p.name) + '</text>' +
-        '<text x="315" y="138" text-anchor="middle" ' + f + ' font-size="20" font-weight="700" letter-spacing="4" fill="#ffc233">' + esc(p.field.toUpperCase()) + '</text>' +
-        '<rect x="56" y="168" width="518" height="430" rx="18" fill="url(#art)" stroke="#ffc233" stroke-width="3"/>' +
-        '<circle cx="315" cy="340" r="92" fill="#ffffff" fill-opacity=".9"/>' +
-        '<path d="M135 598c0-100 80-160 180-160s180 60 180 160z" fill="#ffffff" fill-opacity=".9"/>' +
-        '<rect x="56" y="628" width="518" height="196" rx="16" fill="#000000" fill-opacity=".32"/>' +
-        '<text x="86" y="676" ' + f + ' font-size="26" font-weight="700" fill="#ffffff">' + esc(p.pos) + '</text>' +
-        '<text x="86" y="722" ' + f + ' font-size="16" font-weight="700" letter-spacing="3" fill="#ffc233">RESEARCH INTERESTS</text>' +
-        '<text x="86" y="758" ' + f + ' font-size="22" fill="#ffffff">[PLACEHOLDER]</text>' +
-        '<text x="86" y="802" ' + f + ' font-size="16" fill="#ffffff" fill-opacity=".7" letter-spacing="2">CICS  \u00b7  DLSU-D</text>' +
-        '</svg>';
-      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-    }
-
-    var people = Array.prototype.map.call(document.querySelectorAll('.fac'), function (a) {
-      return {
-        name: a.querySelector('h3').textContent.trim(),
-        pos: a.querySelector('.pos').textContent.trim(),
-        field: a.querySelector('.field').textContent.trim(),
-        dept: a.getAttribute('data-field'),
-        card: a.getAttribute('data-card') || a.getAttribute('data-photo'),
-        bio: (a.querySelector('.info p') || {}).textContent || '',
-        interests: (a.querySelector('.int') || {}).innerHTML || ''
-      };
-    });
-
-    // ---- Click: large holographic card with details ----
-    var modal = document.getElementById('holoModal');
-    var holoRoot = document.getElementById('holoCard');
-    var holoInfo = document.getElementById('holoInfo');
-    var holoClose = document.getElementById('holoClose');
-    var holo = null, lastFocus = null, closing = 0;
-
-    function openHolo(p) {
-      if (!modal) return;
-      clearTimeout(closing);
-      lastFocus = document.activeElement;
-      live.slice().forEach(deactivateNow); // free the grid's contexts while the popup is open
-      holoInfo.innerHTML = '<span class="field">' + esc(p.field) + '</span><h3>' + esc(p.name) + '</h3><div class="pos">' + esc(p.pos) + '</div>' +
-        '<p>' + esc(p.bio) + '</p><div class="int">' + p.interests + '</div><div class="holo-hint">Move your cursor over the card. Press Escape to close.</div>';
-      if (holo) holo.destroy();
-      holo = HoloCard(holoRoot, {
-        image: p.card || cardArt(p), alt: p.name + ' faculty card', preset: 'gold', foilColor: '#e2e6ec', intensity: 0.48,
-        scale: 1, edgeSparkle: 0.45, frame: 4, glare: 0.28, tiltMax: 14, hoverScale: 1.04, radius: 14, width: 320, idle: true, shadow: true
-      });
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      requestAnimationFrame(function () { modal.classList.add('show'); });
-      holoClose.focus();
-    }
-    function closeHolo() {
-      if (!modal || !modal.classList.contains('open')) return;
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      closing = setTimeout(function () {
-        modal.classList.remove('open');
-        if (holo) { holo.destroy(); holo = null; }
-      }, 320);
-      if (lastFocus && lastFocus.focus) lastFocus.focus();
-    }
-    if (modal) {
-      holoClose.addEventListener('click', closeHolo);
-      modal.addEventListener('click', function (e) { if (e.target === modal) closeHolo(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeHolo(); });
-    }
-
-    var live = []; // cells that currently own a WebGL context, oldest first
-    var MAX_LIVE = 4;
-
-    function deactivateNow(cell) {
-      clearTimeout(cell._t);
-      if (cell._holo) { cell._holo.destroy(); cell._holo = null; }
-      cell._live.textContent = '';
-      cell.classList.remove('active');
-      var i = live.indexOf(cell);
-      if (i >= 0) live.splice(i, 1);
-    }
-
-    function activate(cell, person) {
-      clearTimeout(cell._t);
-      if (cell._holo) return;
-      while (live.length >= MAX_LIVE) deactivateNow(live[0]);
-      var root = document.createElement('div');
-      cell._live.appendChild(root);
-      cell._holo = HoloCard(root, {
-        image: person.card || cardArt(person), alt: '', preset: 'gold', foilColor: '#e2e6ec', intensity: 0.48,
-        scale: 1, edgeSparkle: 0.45, frame: 4, glare: 0.28, tiltMax: 14, hoverScale: 1.04, radius: 14, width: 320,
-        idle: false, shadow: true
-      });
-      cell.classList.add('active');
-      live.push(cell);
-    }
-
-    function deactivate(cell) {
-      clearTimeout(cell._t);
-      // Let the card spring back flat before swapping the plain image in.
-      cell._t = setTimeout(function () { deactivateNow(cell); }, 550);
-    }
-
-    people.forEach(function (p) {
-      var cell = document.createElement('div');
-      cell.className = 'hc-cell';
-      cell.setAttribute('data-dept', p.dept);
-      cell.tabIndex = 0;
-      cell.setAttribute('role', 'button');
-      cell.setAttribute('aria-label', p.name + ', ' + p.pos + ', ' + p.field);
-      var img = document.createElement('img');
-      img.className = 'hc-img';
-      img.src = p.card || cardArt(p);
-      img.alt = '';
-      img.draggable = false;
-      var liveEl = document.createElement('div');
-      liveEl.className = 'hc-live';
-      cell.appendChild(img);
-      cell.appendChild(liveEl);
-      cell._live = liveEl;
-      cell._holo = null;
-      ['pointerenter', 'pointerdown', 'focus'].forEach(function (ev) { cell.addEventListener(ev, function () { activate(cell, p); }); });
-      ['pointerleave', 'blur'].forEach(function (ev) { cell.addEventListener(ev, function () { deactivate(cell); }); });
-      cell.addEventListener('click', function () { openHolo(p); });
-      cell.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openHolo(p); }
-      });
-      grid.appendChild(cell);
-    });
-
-    dir.classList.add('js-holo');
-
-    // The department filter buttons also filter the holo grid.
-    document.querySelectorAll('.filters button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var f = b.getAttribute('data-f');
-        Array.prototype.forEach.call(grid.children, function (cell) {
-          cell.hidden = !(f === 'all' || cell.getAttribute('data-dept') === f);
-          if (cell.hidden) deactivateNow(cell);
-        });
-      });
-    });
-  })();
-</script>
 <script src="cardnav.js"></script>
-<script src="polish.js"></script>
 </body>
 </html>

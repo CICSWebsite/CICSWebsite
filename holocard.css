@@ -87,3 +87,10 @@
   .holo-panel { grid-template-columns: 1fr; gap: 12px; text-align: center; }
   .holo-stage { padding: 12px; }
 }
+
+.holo-info .field.lvl { background: rgba(255, 194, 51, .16); color: var(--gold); margin-left: 8px; }
+.holo-info .int b { display: block; margin-bottom: 8px; }
+.holo-info .edu { list-style: none; margin: 0 0 18px; padding: 0; }
+.holo-info .edu li { position: relative; padding: 5px 0 5px 20px; color: #d4eede; font-size: .9rem; line-height: 1.45; }
+.holo-info .edu li::before { content: ""; position: absolute; left: 2px; top: .95em; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+.holo-info .holo-li { margin-top: 4px; }

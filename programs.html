@@ -6,24 +6,12 @@
   <title>Academic Programs | College of Information and Computer Studies</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="cardnav.css">
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html" class="active">Academic Programs</a></li>
-        <li><a href="faculty.html">Faculty &amp; Staff</a></li>
-        <li><a href="services.html">Student Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="cn-host">
+  <div data-cardnav></div>
 </header>
 
 <section class="page-hero">
@@ -53,14 +41,14 @@
 
     <div data-tabs>
       <div class="tab-list">
-        <button class="on" data-tab="bscs">🧠 BS Computer Science</button>
-        <button data-tab="bsit">💻 BS Information Technology</button>
+        <button class="on" data-tab="bscs"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> BS Computer Science</button>
+        <button data-tab="bsit"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> BS Information Technology</button>
       </div>
 
       <!-- BSCS -->
       <article class="program tab-panel on" id="bscs" data-panel="bscs">
         <div class="program-head">
-          <div class="ic">🧠</div>
+          <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
           <div><h3>BS Computer Science (BSCS)</h3><small>Bachelor of Science in Computer Science</small></div>
         </div>
         <div class="program-body">
@@ -103,7 +91,7 @@
       <!-- BSIT -->
       <article class="program tab-panel" id="bsit" data-panel="bsit">
         <div class="program-head">
-          <div class="ic">💻</div>
+          <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
           <div><h3>BS Information Technology (BSIT)</h3><small>Bachelor of Science in Information Technology</small></div>
         </div>
         <div class="program-body">
@@ -155,25 +143,25 @@
     <p class="lead">Tap a card to see the careers each specialization leads to.</p>
     <div class="mini-grid">
       <div class="mini track">
-        <div class="ic">🎮</div><span class="badge green">BSCS</span><h3>Game Development</h3>
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div><span class="badge green">BSCS</span><h3>Game Development</h3>
         <p>Real-world skills and experience for successful game design and development, from fundamental concepts and tools to the challenges of the game and software development industry.</p>
         <div class="more-info"><h4>Careers</h4><div class="chips small"><span>Game Designer</span><span>System Designer</span><span>Level Designer</span><span>Game Programmer</span><span>Gameplay Engineer</span></div></div>
         <span class="toggle">Careers</span>
       </div>
       <div class="mini track">
-        <div class="ic">🤖</div><span class="badge green">BSCS</span><h3>Intelligent Systems</h3>
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><span class="badge green">BSCS</span><h3>Intelligent Systems</h3>
         <p>Focuses on solving problems in Artificial Intelligence: problem-solving, decision-making, environmental adaptation, learning, and communication using computers and algorithms.</p>
         <div class="more-info"><h4>Careers</h4><div class="chips small"><span>AI Programmer</span><span>Machine Learning Engineer</span><span>Computer Vision &amp; Image Data Analyst</span><span>Software Engineer</span><span>Systems Administrator</span></div></div>
         <span class="toggle">Careers</span>
       </div>
       <div class="mini track">
-        <div class="ic">📡</div><span class="badge">BSIT</span><h3>Network Technology</h3>
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14 0M1.4 9a16 16 0 0 1 21.2 0M8.5 16.1a6 6 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div><span class="badge">BSIT</span><h3>Network Technology</h3>
         <p>A BSIT track for students interested in networks, system security, and infrastructure.</p>
         <div class="more-info"><h4>Related careers</h4><div class="chips small"><span>Network Administrator</span><span>Network Engineer</span><span>Information Security Administrator</span><span>Cybersecurity Analyst</span></div></div>
         <span class="toggle">Careers</span>
       </div>
       <div class="mini track">
-        <div class="ic">🌐</div><span class="badge">BSIT</span><h3>Software Technology</h3>
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span class="badge">BSIT</span><h3>Software Technology</h3>
         <p>A BSIT track for students interested in building web and software applications.</p>
         <div class="more-info"><h4>Related careers</h4><div class="chips small"><span>Programmer</span><span>Web Developer</span><span>Software Developer</span><span>Full-Stack Developer</span></div></div>
         <span class="toggle">Careers</span>
@@ -199,6 +187,7 @@
   <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
+<script src="cardnav.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

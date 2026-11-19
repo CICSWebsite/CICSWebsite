@@ -156,7 +156,7 @@
 
 /* ---------- Site integration ---------- */
 /* The header becomes a zero-height sticky host so the floating bar overlays the page. */
-header.cn-host, header.cn-host.scrolled {
+header.cn-host, header.cn-host.scrolled, header.cn-host.stuck {
   position: sticky; top: 0; height: 0; overflow: visible; z-index: 80;
   background: none; border: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none;
 }
@@ -189,5 +189,5 @@ header.cn-host::before {
   box-shadow: 0 8px 24px -10px rgba(4, 23, 15, .55);
   opacity: 0; transition: opacity .3s ease; pointer-events: none;
 }
-header.cn-host.scrolled::before { opacity: 1; }
+header.cn-host.scrolled::before, header.cn-host.stuck::before { opacity: 1; }
 .card-nav__panel { box-shadow: var(--cn-shadow), 0 0 0 1px rgba(110, 231, 168, .14); }
