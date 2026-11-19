@@ -6,24 +6,14 @@
   <title>Academic Programs | College of Information and Computer Studies</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="icon" href="photos/logo.jpg">
+  <link rel="stylesheet" href="cardnav.css">
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html" class="active">Academic Programs</a></li>
-        <li><a href="faculty.html">Faculty &amp; Staff</a></li>
-        <li><a href="services.html">Student Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="cn-host">
+  <div data-cardnav></div>
 </header>
 
 <section class="page-hero">
@@ -54,7 +44,7 @@
 
     <article class="program" id="bsit">
       <div class="program-head">
-        <div class="ic">💻</div>
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <div><h3>BS Information Technology (BSIT)</h3><small>Bachelor of Science in Information Technology</small></div>
       </div>
       <div class="program-body">
@@ -76,7 +66,7 @@
 
     <article class="program" id="bscs">
       <div class="program-head">
-        <div class="ic">🧠</div>
+        <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
         <div><h3>BS Computer Science (BSCS)</h3><small>Bachelor of Science in Computer Science</small></div>
       </div>
       <div class="program-body">
@@ -104,10 +94,10 @@
     <h2>Focus on what you love</h2>
     <p class="lead">Choose a track within your program to deepen your skills.</p>
     <div class="mini-grid">
-      <div class="mini"><div class="ic">🌐</div><span class="badge">BSIT</span><h3>Network Technology</h3><p>Design, build, and secure computer networks.</p></div>
-      <div class="mini"><div class="ic">💻</div><span class="badge">BSIT</span><h3>Software Technology</h3><p>Develop software and web applications.</p></div>
-      <div class="mini"><div class="ic">🤖</div><span class="badge">BSCS</span><h3>Robotics</h3><p>Intelligent systems and robotics applications.</p></div>
-      <div class="mini"><div class="ic">🎮</div><span class="badge">BSCS</span><h3>Mobile and Game Development</h3><p>Build mobile apps and games.</p></div>
+      <div class="mini"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span class="badge">BSIT</span><h3>Network Technology</h3><p>Design, build, and secure computer networks.</p></div>
+      <div class="mini"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span class="badge">BSIT</span><h3>Software Technology</h3><p>Develop software and web applications.</p></div>
+      <div class="mini"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><span class="badge">BSCS</span><h3>Robotics</h3><p>Intelligent systems and robotics applications.</p></div>
+      <div class="mini"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div><span class="badge">BSCS</span><h3>Mobile and Game Development</h3><p>Build mobile apps and games.</p></div>
     </div>
   </div>
 </section>
@@ -118,9 +108,9 @@
     <h2>Eligibility</h2>
     <p class="lead">Applicable to both programs.</p>
     <div class="mini-grid">
-      <div class="mini"><div class="ic">🎓</div><h3>College freshmen</h3><p>Including Senior High School completers, foreign secondary graduates, and ALS passers.</p></div>
-      <div class="mini"><div class="ic">🔁</div><h3>College transferees</h3><p>Subject to conditions on prior units taken.</p></div>
-      <div class="mini"><div class="ic">📜</div><h3>Second-course takers</h3><p>For applicants who already hold a college degree.</p></div>
+      <div class="mini"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><h3>College freshmen</h3><p>Including Senior High School completers, foreign secondary graduates, and ALS passers.</p></div>
+      <div class="mini"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><h3>College transferees</h3><p>Subject to conditions on prior units taken.</p></div>
+      <div class="mini"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></div><h3>Second-course takers</h3><p>For applicants who already hold a college degree.</p></div>
     </div>
   </div>
 </section>
@@ -138,8 +128,45 @@
   </div>
 </section>
 
-<footer>
-  <div class="container"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo"><i class="logo-mark"><img src="photos/logo.jpg" alt="CICS seal, De La Salle University-Dasmariñas"></i><div>CI<span>CS</span></div></a>
+        <p>College of Information and Computer Studies, De La Salle University-Dasmariñas. A leader in technological education.</p>
+        <div class="foot-social">
+          <a href="https://www.facebook.com/DLSUD.CICSSG" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/dlsud.cicssg/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Academic Programs</a></li>
+          <li><a href="faculty.html">Faculty &amp; Staff</a></li>
+          <li><a href="services.html">Student Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Room 312, Paulo Campos Hall<br>De La Salle University-Dasmariñas<br>Dasmariñas City, Cavite 4115</li>
+          <li><a href="mailto:itdchair@dlsud.edu.ph">itdchair@dlsud.edu.ph</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get started</h4>
+        <ul>
+          <li><a href="programs.html#eligibility">Who can apply</a></li>
+          <li><a href="services.html#enrollment">Enrollment guide</a></li>
+          <li><a href="services.html#forms">Downloadable forms</a></li>
+          <li><a href="contact.html#inquiry">Send an inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+  </div>
 </footer>
 
 <script>
@@ -147,5 +174,7 @@ document.querySelectorAll('section:not(.page-hero) .container > *, .mini, .dl, .
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 </script>
+<script src="cardnav.js"></script>
+<script src="polish.js"></script>
 </body>
 </html>
