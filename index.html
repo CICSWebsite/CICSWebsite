@@ -21,7 +21,11 @@
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">College of Information and Computer Studies</span>
-      <h1>Innovate. Code. <em>Lead the Digital Future.</em></h1>
+      <h1 class="fz-title" aria-label="Innovate. Code. Lead the Digital Future.">
+        <span class="fz-line" id="fz1">Innovate. Code.</span>
+        <span class="fz-line" id="fz2">Lead the Digital</span>
+        <span class="fz-line" id="fz3">Future.</span>
+      </h1>
       <p>A leader in technological education, committed to academic excellence, innovation, and high ethical standards.</p>
       <div class="hero-actions"><a href="#about" class="btn btn-primary">Learn More →</a><a href="programs.html" class="btn btn-outline">Explore Programs</a></div>
     </div>
@@ -164,6 +168,20 @@ const els=document.querySelectorAll('section .container > *, .stat, .prog, .card
 els.forEach(e=>{if(!e.closest('.hero'))e.classList.add('reveal')});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+<script src="fuzzy-text.js"></script>
+<script>
+  // Hero headline: one FuzzyText canvas per line, so each line can have its own colors.
+  (function () {
+    var base = {
+      fontSize: 'clamp(2.5rem, 5.4vw, 4.3rem)', fontWeight: 800, fontFamily: 'Sora, sans-serif',
+      fuzzRange: 16, baseIntensity: 0.15, hoverIntensity: 0.5, direction: 'horizontal',
+      sliceSize: 1, fps: 60, trigger: 'hover', intro: true, introDuration: 1400
+    };
+    FuzzyText(document.getElementById('fz1'), 'Innovate. Code.', Object.assign({}, base, { color: '#ffffff' }));
+    FuzzyText(document.getElementById('fz2'), 'Lead the Digital', Object.assign({}, base, { gradient: ['#6ee7a8', '#a7f3c4', '#d9e58a'] }));
+    FuzzyText(document.getElementById('fz3'), 'Future.', Object.assign({}, base, { gradient: ['#d9e58a', '#ffc233'] }));
+  })();
 </script>
 <script src="border-glow.js"></script>
 <script src="cardnav.js"></script>
