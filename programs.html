@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Programs | College of Information and Computer Studies</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html" class="active">Academic Programs</a></li>
+        <li><a href="faculty.html">Faculty &amp; Staff</a></li>
+        <li><a href="services.html">Student Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Academic Programs</div>
+    <span class="eyebrow">Academic Programs</span>
+    <h1>Choose your path in computing</h1>
+    <p>Explore every degree we offer, from undergraduate programs to graduate studies and specialized tracks.</p>
+  </div>
+</section>
+
+<div class="subnav" aria-label="On this page">
+  <div class="container">
+    <a href="#undergraduate">Undergraduate</a>
+    <a href="#bsit">BSIT</a>
+    <a href="#bscs">BSCS</a>
+    <a href="#bsis">BSIS / Others</a>
+    <a href="#graduate">Graduate</a>
+    <a href="#tracks">Specializations</a>
+    <a href="#downloads">Downloads</a>
+  </div>
+</div>
+
+<section id="undergraduate">
+  <div class="container">
+    <span class="eyebrow">Undergraduate Programs</span>
+    <h2>Bachelor's degrees</h2>
+    <p class="lead">Industry-aligned four-year programs that combine strong foundations with hands-on practice.</p>
+
+    <!-- BSIT -->
+    <article class="program" id="bsit">
+      <div class="program-head">
+        <div class="ic">💻</div>
+        <div><h3>BS Information Technology (BSIT)</h3><small>Bachelor of Science in Information Technology</small></div>
+      </div>
+      <div class="program-body">
+        <div>
+          <h4>Program Description</h4>
+          <p>[Describe the BSIT program: focus, learning outcomes, and who it is for.]</p>
+        </div>
+        <div>
+          <h4>Curriculum Overview</h4>
+          <div class="years">
+            <div><b>Year 1</b>[Programming fundamentals, computing basics]</div>
+            <div><b>Year 2</b>[Databases, networking, web development]</div>
+            <div><b>Year 3</b>[Systems administration, security, electives]</div>
+            <div><b>Year 4</b>[Capstone project, internship / OJT]</div>
+          </div>
+        </div>
+        <div>
+          <h4>Career Paths</h4>
+          <div class="chips"><span>Web Developer</span><span>Network Administrator</span><span>Systems Analyst</span><span>IT Support Specialist</span><span>Database Administrator</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- BSCS -->
+    <article class="program" id="bscs">
+      <div class="program-head">
+        <div class="ic">🧠</div>
+        <div><h3>BS Computer Science (BSCS)</h3><small>Bachelor of Science in Computer Science</small></div>
+      </div>
+      <div class="program-body">
+        <div>
+          <h4>Program Description</h4>
+          <p>[Describe the BSCS program: theory, algorithms, software engineering, and research focus.]</p>
+        </div>
+        <div>
+          <h4>Curriculum Overview</h4>
+          <div class="years">
+            <div><b>Year 1</b>[Programming, discrete math]</div>
+            <div><b>Year 2</b>[Data structures, algorithms, architecture]</div>
+            <div><b>Year 3</b>[Operating systems, AI, software engineering]</div>
+            <div><b>Year 4</b>[Thesis / capstone, internship / OJT]</div>
+          </div>
+        </div>
+        <div>
+          <h4>Career Paths</h4>
+          <div class="chips"><span>Software Engineer</span><span>Data Scientist</span><span>AI / ML Engineer</span><span>Game Developer</span><span>Researcher</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Optional -->
+    <article class="program" id="bsis">
+      <div class="program-head">
+        <div class="ic">🗂️</div>
+        <div><h3>Other Programs (BSIS / BSEMC / etc.)</h3><small>Optional: add or remove programs as offered</small></div>
+      </div>
+      <div class="program-body">
+        <div>
+          <h4>Program Description</h4>
+          <p>[Describe the additional program, e.g. BS Information Systems or BS Entertainment and Multimedia Computing.]</p>
+        </div>
+        <div>
+          <h4>Curriculum Overview</h4>
+          <div class="years">
+            <div><b>Year 1</b>[Core subjects]</div>
+            <div><b>Year 2</b>[Core subjects]</div>
+            <div><b>Year 3</b>[Specialized subjects]</div>
+            <div><b>Year 4</b>[Capstone, internship / OJT]</div>
+          </div>
+        </div>
+        <div>
+          <h4>Career Paths</h4>
+          <div class="chips"><span>[Career path]</span><span>[Career path]</span><span>[Career path]</span></div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="graduate" class="alt">
+  <div class="container">
+    <span class="eyebrow">Graduate Programs</span>
+    <h2>Advance your expertise</h2>
+    <p class="lead">Offered if applicable. Remove this section when the college has no graduate programs.</p>
+    <div class="mini-grid">
+      <div class="mini"><div class="ic">🎓</div><span class="badge">Master's</span><h3>Master of Science in Computer Science</h3><p>[Short description, duration, and admission notes.]</p></div>
+      <div class="mini"><div class="ic">📡</div><span class="badge">Master's</span><h3>Master in Information Technology</h3><p>[Short description, duration, and admission notes.]</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tracks">
+  <div class="container">
+    <span class="eyebrow">Specializations or Tracks</span>
+    <h2>Focus on what you love</h2>
+    <p class="lead">Choose a track to deepen your skills in a specific area.</p>
+    <div class="mini-grid">
+      <div class="mini"><div class="ic">🌐</div><h3>Web &amp; Mobile Development</h3><p>[Track description]</p></div>
+      <div class="mini"><div class="ic">🤖</div><h3>Artificial Intelligence</h3><p>[Track description]</p></div>
+      <div class="mini"><div class="ic">🔒</div><h3>Cybersecurity</h3><p>[Track description]</p></div>
+      <div class="mini"><div class="ic">📊</div><h3>Data Science</h3><p>[Track description]</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="downloads" class="alt">
+  <div class="container">
+    <span class="eyebrow">Downloadable Curriculum / Course Prospectus</span>
+    <h2>Take it with you</h2>
+    <p class="lead">Download the full curriculum for each program. Replace the links with your PDF files.</p>
+    <div class="downloads">
+      <a class="dl" href="downloads/bsit-curriculum.pdf" download><div class="ic">⬇</div><div><b>BSIT Curriculum</b><small>PDF</small></div><span class="arrow">→</span></a>
+      <a class="dl" href="downloads/bscs-curriculum.pdf" download><div class="ic">⬇</div><div><b>BSCS Curriculum</b><small>PDF</small></div><span class="arrow">→</span></a>
+      <a class="dl" href="downloads/course-prospectus.pdf" download><div class="ic">⬇</div><div><b>Course Prospectus</b><small>PDF</small></div><span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('section:not(.page-hero) .container > *, .mini, .dl, .program').forEach(e=>e.classList.add('reveal'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
