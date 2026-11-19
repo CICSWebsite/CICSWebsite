@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found | College of Information and Computer Studies</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="icon" href="photos/logo.jpg">
+  <style>
+    .nf { min-height: calc(100vh - 72px); display: grid; place-items: center; text-align: center; color: #fff; padding: 60px 0;
+      background: radial-gradient(800px 500px at 80% 10%, rgba(124,77,255,.5), transparent 60%), radial-gradient(700px 500px at 0% 100%, rgba(34,211,238,.28), transparent 60%), linear-gradient(160deg, var(--navy), var(--navy-2)); }
+    .nf .container { position: relative; z-index: 1; }
+    .nf #fuzzy { display: flex; justify-content: center; color: #fff; font-family: "Sora", sans-serif; }
+    .nf h1 { font-size: clamp(1.4rem, 3vw, 2rem); margin: 8px 0 12px; }
+    .nf p { color: #b9c5e0; max-width: 460px; margin: 0 auto 30px; }
+    .nf .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  </style>
+  <link rel="stylesheet" href="cardnav.css">
+</head>
+<body>
+
+<header class="cn-host">
+  <div data-cardnav></div>
+</header>
+
+<main class="nf">
+  <div class="container">
+    <div id="fuzzy" aria-label="404">404</div>
+    <h1>This page could not be found</h1>
+    <p>The page you are looking for may have moved or no longer exists. Let's get you back on track.</p>
+    <div class="cta-btns">
+      <a href="index.html" class="btn btn-primary">Back to Home →</a>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+</main>
+
+<script src="fuzzy-text.js"></script>
+<script>
+  FuzzyText(document.getElementById('fuzzy'), '404', {
+    colorSplit: 0,
+    trigger: 'hover',
+    direction: 'horizontal',
+    baseIntensity: 0.2,
+    hoverIntensity: 0.5,
+    fuzzRange: 30,
+    sliceSize: 1,
+    fps: 60,
+    transitionDuration: 0,
+    intro: true,
+    introDuration: 1400,
+    letterSpacing: 0,
+    enableHover: true,
+    clickEffect: false,
+    glitchMode: false,
+    glitchInterval: 2000,
+    glitchDuration: 200
+  });
+</script>
+<script src="cardnav.js"></script>
+<script src="polish.js"></script>
+</body>
+</html>
