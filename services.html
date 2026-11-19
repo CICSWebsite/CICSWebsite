@@ -6,6 +6,7 @@
   <title>Student Services | College of Information and Computer Studies</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="faculty.css">
   <link rel="stylesheet" href="services.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
 <header>
   <div class="container nav">
     <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
+    <button class="menu-btn" aria-label="Menu">☰</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -66,11 +67,11 @@
       </div>
       <div class="panel dark">
         <h3>Book a session</h3>
-        <p>[Advising hours, location, and booking method.]</p>
+        <p>Reach the college office to schedule a consultation.</p>
         <ul class="ticks">
           <li>Office hours: [Days and time]</li>
-          <li>Location: [Room / building]</li>
-          <li>Email: [adviser@example.edu]</li>
+          <li>Location: Room 312, Paulo Campos Hall</li>
+          <li>Email: itdchair@dlsud.edu.ph</li>
         </ul>
       </div>
     </div>
@@ -81,13 +82,14 @@
   <div class="container">
     <span class="eyebrow">Enrollment &amp; Registration Guidelines</span>
     <h2>Enroll in four steps</h2>
-    <p class="lead">Follow these steps each semester. Check the Announcements section on the Home page for deadlines.</p>
-    <div class="steps">
-      <div class="step"><h3>Get advised</h3><p>[Meet your adviser and confirm your subjects.]</p></div>
-      <div class="step"><h3>Submit requirements</h3><p>[List of documents and clearances needed.]</p></div>
-      <div class="step"><h3>Register subjects</h3><p>[How and where to register online or on campus.]</p></div>
-      <div class="step"><h3>Pay and confirm</h3><p>[Payment options and confirmation of enrollment.]</p></div>
+    <p class="lead">Tap each step as you finish it to track your progress. Check the Announcements section on the Home page for deadlines.</p>
+    <div class="steps" id="steps">
+      <div class="step" tabindex="0" role="checkbox" aria-checked="false"><h3>Get advised</h3><p>[Meet your adviser and confirm your subjects.]</p></div>
+      <div class="step" tabindex="0" role="checkbox" aria-checked="false"><h3>Submit requirements</h3><p>[List of documents and clearances needed.]</p></div>
+      <div class="step" tabindex="0" role="checkbox" aria-checked="false"><h3>Register subjects</h3><p>[How and where to register online or on campus.]</p></div>
+      <div class="step" tabindex="0" role="checkbox" aria-checked="false"><h3>Pay and confirm</h3><p>[Payment options and confirmation of enrollment.]</p></div>
     </div>
+    <div class="step-progress"><div class="bar"><i id="stepBar"></i></div><p id="stepText">0 of 4 steps done</p></div>
   </div>
 </section>
 
@@ -151,7 +153,11 @@
     <span class="eyebrow">Scholarships &amp; Financial Assistance</span>
     <h2>Make your education affordable</h2>
     <p class="lead">Explore programs that can help with tuition and other costs.</p>
-    <div class="acc">
+    <div class="faq-tools">
+      <div class="search"><input id="faqSearch" type="search" placeholder="Search scholarships…" aria-label="Search scholarships"></div>
+      <button class="link" id="expandAll" type="button">Expand all</button>
+    </div>
+    <div class="acc" id="acc">
       <details open><summary><span class="ic">🎓</span>Academic scholarships</summary><div class="ans">[Eligibility, grade requirements, benefits, and how to apply.]</div></details>
       <details><summary><span class="ic">🤝</span>Government grants and programs</summary><div class="ans">[Available programs, requirements, and application period.]</div></details>
       <details><summary><span class="ic">💼</span>Student assistantship</summary><div class="ans">[Work-study details, hours, and how to apply.]</div></details>
@@ -179,13 +185,38 @@
 </section>
 
 <footer>
-  <div class="container"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
+<script src="script.js"></script>
 <script>
-document.querySelectorAll('section:not(.page-hero) .container > *, .step, .club, .mini, .dl').forEach(e=>e.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+/* Enrollment checklist (remembered in this browser) */
+(() => {
+  const steps = [...document.querySelectorAll('#steps .step')], bar = document.getElementById('stepBar'), txt = document.getElementById('stepText');
+  let saved = []; try { saved = JSON.parse(localStorage.getItem('cics-steps') || '[]'); } catch (e) {}
+  const update = () => {
+    const n = steps.filter(s => s.classList.contains('done')).length;
+    bar.style.width = n / steps.length * 100 + '%';
+    txt.textContent = n === steps.length ? '🎉 All done. You are enrolled!' : `${n} of ${steps.length} steps done`;
+    try { localStorage.setItem('cics-steps', JSON.stringify(steps.map(s => s.classList.contains('done')))); } catch (e) {}
+  };
+  steps.forEach((s, i) => {
+    if (saved[i]) { s.classList.add('done'); s.setAttribute('aria-checked', 'true'); }
+    const flip = () => { s.classList.toggle('done'); s.setAttribute('aria-checked', s.classList.contains('done')); update(); };
+    s.addEventListener('click', flip);
+    s.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+  });
+  update();
+
+  /* Scholarship search + expand all */
+  const ds = [...document.querySelectorAll('#acc details')];
+  document.getElementById('faqSearch').addEventListener('input', e => {
+    const t = e.target.value.toLowerCase().trim();
+    ds.forEach(d => d.classList.toggle('hide', t && !d.textContent.toLowerCase().includes(t)));
+  });
+  const btn = document.getElementById('expandAll'); let open = false;
+  btn.addEventListener('click', () => { open = !open; ds.forEach(d => d.open = open); btn.textContent = open ? 'Collapse all' : 'Expand all'; });
+})();
 </script>
 </body>
 </html>

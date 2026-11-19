@@ -12,7 +12,7 @@
 <header>
   <div class="container nav">
     <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
+    <button class="menu-btn" aria-label="Menu">☰</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -31,17 +31,15 @@
     <div class="crumbs"><a href="index.html">Home</a> / Academic Programs</div>
     <span class="eyebrow">Academic Programs</span>
     <h1>Choose your path in computing</h1>
-    <p>Explore every degree we offer, from undergraduate programs to graduate studies and specialized tracks.</p>
+    <p>Explore our degree programs, specializations, and the careers they lead to.</p>
   </div>
 </section>
 
 <div class="subnav" aria-label="On this page">
   <div class="container">
     <a href="#undergraduate">Undergraduate</a>
-    <a href="#bsit">BSIT</a>
     <a href="#bscs">BSCS</a>
-    <a href="#bsis">BSIS / Others</a>
-    <a href="#graduate">Graduate</a>
+    <a href="#bsit">BSIT</a>
     <a href="#tracks">Specializations</a>
     <a href="#downloads">Downloads</a>
   </div>
@@ -51,118 +49,140 @@
   <div class="container">
     <span class="eyebrow">Undergraduate Programs</span>
     <h2>Bachelor's degrees</h2>
-    <p class="lead">Industry-aligned four-year programs that combine strong foundations with hands-on practice.</p>
+    <p class="lead">Switch between programs to compare descriptions, goals, curriculum, and career paths.</p>
 
-    <!-- BSIT -->
-    <article class="program" id="bsit">
-      <div class="program-head">
-        <div class="ic">💻</div>
-        <div><h3>BS Information Technology (BSIT)</h3><small>Bachelor of Science in Information Technology</small></div>
+    <div data-tabs>
+      <div class="tab-list">
+        <button class="on" data-tab="bscs">🧠 BS Computer Science</button>
+        <button data-tab="bsit">💻 BS Information Technology</button>
       </div>
-      <div class="program-body">
-        <div>
-          <h4>Program Description</h4>
-          <p>[Describe the BSIT program: focus, learning outcomes, and who it is for.]</p>
+
+      <!-- BSCS -->
+      <article class="program tab-panel on" id="bscs" data-panel="bscs">
+        <div class="program-head">
+          <div class="ic">🧠</div>
+          <div><h3>BS Computer Science (BSCS)</h3><small>Bachelor of Science in Computer Science</small></div>
         </div>
-        <div>
-          <h4>Curriculum Overview</h4>
-          <div class="years">
-            <div><b>Year 1</b>[Programming fundamentals, computing basics]</div>
-            <div><b>Year 2</b>[Databases, networking, web development]</div>
-            <div><b>Year 3</b>[Systems administration, security, electives]</div>
-            <div><b>Year 4</b>[Capstone project, internship / OJT]</div>
+        <div class="program-body">
+          <div>
+            <h4>Program Description</h4>
+            <p>The BSCS program prepares students to be highly competent and certified in the areas of computing theory and applications. It trains them in abstract reasoning, analytical thinking, and research, with tracks in Robotics or Mobile and Game Development.</p>
+            <p>Specializations are also offered in <b>Game Development</b> and <b>Intelligent Systems</b> (see below).</p>
+          </div>
+          <div>
+            <h4>Curriculum Overview</h4>
+            <div class="years">
+              <div><b>Year 1</b><span class="todo">[Subjects to be added]</span></div>
+              <div><b>Year 2</b><span class="todo">[Subjects to be added]</span></div>
+              <div><b>Year 3</b><span class="todo">[Subjects to be added]</span></div>
+              <div><b>Year 4</b><span class="todo">[Subjects to be added]</span></div>
+            </div>
+          </div>
+          <div>
+            <h4>Career Options</h4>
+            <div class="chips"><span>Application / Game Developer</span><span>CS Instructor</span><span>Researcher</span><span>Trainer</span><span>Database Programmer / Designer</span><span>Mobile Application Developer</span><span>Systems Analyst</span></div>
           </div>
         </div>
-        <div>
-          <h4>Career Paths</h4>
-          <div class="chips"><span>Web Developer</span><span>Network Administrator</span><span>Systems Analyst</span><span>IT Support Specialist</span><span>Database Administrator</span></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- BSCS -->
-    <article class="program" id="bscs">
-      <div class="program-head">
-        <div class="ic">🧠</div>
-        <div><h3>BS Computer Science (BSCS)</h3><small>Bachelor of Science in Computer Science</small></div>
-      </div>
-      <div class="program-body">
-        <div>
-          <h4>Program Description</h4>
-          <p>[Describe the BSCS program: theory, algorithms, software engineering, and research focus.]</p>
-        </div>
-        <div>
-          <h4>Curriculum Overview</h4>
-          <div class="years">
-            <div><b>Year 1</b>[Programming, discrete math]</div>
-            <div><b>Year 2</b>[Data structures, algorithms, architecture]</div>
-            <div><b>Year 3</b>[Operating systems, AI, software engineering]</div>
-            <div><b>Year 4</b>[Thesis / capstone, internship / OJT]</div>
+        <div class="goals">
+          <div class="goals-title">Program Goals</div>
+          <div class="goal-grid">
+            <div class="goal">Apply concepts of computing and mathematics in different domains of computer science.</div>
+            <div class="goal">Design, develop, test and evaluate various solutions using algorithms for complex computing problems that take full advantage of the usability of computer resources.</div>
+            <div class="goal">Document computer-based systems by writing effective reports for risk-assessment impact.</div>
+            <div class="goal">Communicate effectively with computing and non-computer science professionals about computing activities.</div>
+            <div class="goal">Recognize the legal, social, ethical, and professional issues involved in the utilization of computer technology and address these issues.</div>
+            <div class="goal">Engage in continuing professional development through performing independent or collaborative research as computing professionals.</div>
           </div>
         </div>
-        <div>
-          <h4>Career Paths</h4>
-          <div class="chips"><span>Software Engineer</span><span>Data Scientist</span><span>AI / ML Engineer</span><span>Game Developer</span><span>Researcher</span></div>
+        <div class="path-filter">
+          <div class="goals-title">Career Pathways</div>
+          <div class="chips small"><span>Software Engineer</span><span>Application Developer</span><span>Web Developer</span><span>Mobile App Developer</span><span>Data Analyst</span><span>Data Scientist</span><span>Business Intelligence Analyst</span><span>Security Analyst</span><span>Penetration Tester</span><span>Security Engineer</span><span>AI Engineer</span><span>ML Engineer</span><span>NLP Specialist</span><span>Cloud Engineer</span><span>DevOps Engineer</span><span>Site Reliability Engineer</span><span>System Administrator</span><span>Network Engineer</span></div>
         </div>
-      </div>
-    </article>
+      </article>
 
-    <!-- Optional -->
-    <article class="program" id="bsis">
-      <div class="program-head">
-        <div class="ic">🗂️</div>
-        <div><h3>Other Programs (BSIS / BSEMC / etc.)</h3><small>Optional: add or remove programs as offered</small></div>
-      </div>
-      <div class="program-body">
-        <div>
-          <h4>Program Description</h4>
-          <p>[Describe the additional program, e.g. BS Information Systems or BS Entertainment and Multimedia Computing.]</p>
+      <!-- BSIT -->
+      <article class="program tab-panel" id="bsit" data-panel="bsit">
+        <div class="program-head">
+          <div class="ic">💻</div>
+          <div><h3>BS Information Technology (BSIT)</h3><small>Bachelor of Science in Information Technology</small></div>
         </div>
-        <div>
-          <h4>Curriculum Overview</h4>
-          <div class="years">
-            <div><b>Year 1</b>[Core subjects]</div>
-            <div><b>Year 2</b>[Core subjects]</div>
-            <div><b>Year 3</b>[Specialized subjects]</div>
-            <div><b>Year 4</b>[Capstone, internship / OJT]</div>
+        <div class="program-body">
+          <div>
+            <h4>Program Description</h4>
+            <p>The BSIT program focuses on the rigorous training of students with the latest IT concepts and applications. It provides a practical approach to studying the various facets and latest applications of the IT industry, with tracks in <b>Network Technology</b> or <b>Software Technology</b>.</p>
+          </div>
+          <div>
+            <h4>Curriculum Overview</h4>
+            <div class="years">
+              <div><b>Year 1</b><span class="todo">[Subjects to be added]</span></div>
+              <div><b>Year 2</b><span class="todo">[Subjects to be added]</span></div>
+              <div><b>Year 3</b><span class="todo">[Subjects to be added]</span></div>
+              <div><b>Year 4</b><span class="todo">[Subjects to be added]</span></div>
+            </div>
+          </div>
+          <div>
+            <h4>Career Options</h4>
+            <div class="chips"><span>Database Administrator</span><span>IT Entrepreneur</span><span>Information Security Administrator</span><span>IT Instructor</span><span>Programmer</span><span>Trainer / Researcher</span><span>Network Administrator</span><span>Technical Support Specialist</span><span>Web Administrator</span><span>Webmaster</span><span>Web Developer</span><span>Network Engineer</span></div>
           </div>
         </div>
-        <div>
-          <h4>Career Paths</h4>
-          <div class="chips"><span>[Career path]</span><span>[Career path]</span><span>[Career path]</span></div>
+        <div class="goals">
+          <div class="goals-title">Program Goals</div>
+          <div class="goal-grid">
+            <div class="goal">Apply concepts of computing in different domains of information technology.</div>
+            <div class="goal">Identify and analyze the problem and define the computing requirements appropriate to its solution.</div>
+            <div class="goal">Design, develop, test and evaluate various solutions using modern computing tools for complex computing problems.</div>
+            <div class="goal">Document the computer-based systems by writing effective reports for end-users.</div>
+            <div class="goal">Work effectively as an individual or as a member of a team during software development for company-based systems.</div>
+            <div class="goal">Manage and maintain system security, reliability, and efficiency.</div>
+            <div class="goal">Communicate effectively with the computing community and non-IT professionals about computing activities.</div>
+            <div class="goal">Recognize the legal, social, ethical, and professional issues involved in the utilization of computer technology and address these issues.</div>
+            <div class="goal">Engage in continuing professional development through performing independent or collaborative research as computing professionals.</div>
+          </div>
         </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="graduate" class="alt">
-  <div class="container">
-    <span class="eyebrow">Graduate Programs</span>
-    <h2>Advance your expertise</h2>
-    <p class="lead">Offered if applicable. Remove this section when the college has no graduate programs.</p>
-    <div class="mini-grid">
-      <div class="mini"><div class="ic">🎓</div><span class="badge">Master's</span><h3>Master of Science in Computer Science</h3><p>[Short description, duration, and admission notes.]</p></div>
-      <div class="mini"><div class="ic">📡</div><span class="badge">Master's</span><h3>Master in Information Technology</h3><p>[Short description, duration, and admission notes.]</p></div>
+        <div class="path-filter">
+          <div class="goals-title">Career Pathways</div>
+          <div class="chips small"><span>Web Developer</span><span>Front-End Developer</span><span>Back-End Developer</span><span>Full-Stack Developer</span><span>UI/UX Designer</span><span>Mobile App Developer</span><span>SEO Specialist</span><span>Web Analyst</span><span>IT Instructor</span><span>Network Administrator</span><span>Systems Administrator</span><span>Network Engineer</span><span>Cybersecurity Analyst</span><span>IT Support Specialist</span><span>Cloud Engineer</span><span>Database Administrator</span><span>Telecommunications Specialist</span><span>Software Developer</span><span>Programmer</span><span>Data Analyst</span><span>IT Project Manager</span><span>Technical Support Engineer</span><span>IT Trainer</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="tracks">
+<section id="tracks" class="alt">
   <div class="container">
-    <span class="eyebrow">Specializations or Tracks</span>
+    <span class="eyebrow">Specializations &amp; Tracks</span>
     <h2>Focus on what you love</h2>
-    <p class="lead">Choose a track to deepen your skills in a specific area.</p>
+    <p class="lead">Tap a card to see the careers each specialization leads to.</p>
     <div class="mini-grid">
-      <div class="mini"><div class="ic">🌐</div><h3>Web &amp; Mobile Development</h3><p>[Track description]</p></div>
-      <div class="mini"><div class="ic">🤖</div><h3>Artificial Intelligence</h3><p>[Track description]</p></div>
-      <div class="mini"><div class="ic">🔒</div><h3>Cybersecurity</h3><p>[Track description]</p></div>
-      <div class="mini"><div class="ic">📊</div><h3>Data Science</h3><p>[Track description]</p></div>
+      <div class="mini track">
+        <div class="ic">🎮</div><span class="badge green">BSCS</span><h3>Game Development</h3>
+        <p>Real-world skills and experience for successful game design and development, from fundamental concepts and tools to the challenges of the game and software development industry.</p>
+        <div class="more-info"><h4>Careers</h4><div class="chips small"><span>Game Designer</span><span>System Designer</span><span>Level Designer</span><span>Game Programmer</span><span>Gameplay Engineer</span></div></div>
+        <span class="toggle">Careers</span>
+      </div>
+      <div class="mini track">
+        <div class="ic">🤖</div><span class="badge green">BSCS</span><h3>Intelligent Systems</h3>
+        <p>Focuses on solving problems in Artificial Intelligence: problem-solving, decision-making, environmental adaptation, learning, and communication using computers and algorithms.</p>
+        <div class="more-info"><h4>Careers</h4><div class="chips small"><span>AI Programmer</span><span>Machine Learning Engineer</span><span>Computer Vision &amp; Image Data Analyst</span><span>Software Engineer</span><span>Systems Administrator</span></div></div>
+        <span class="toggle">Careers</span>
+      </div>
+      <div class="mini track">
+        <div class="ic">📡</div><span class="badge">BSIT</span><h3>Network Technology</h3>
+        <p>A BSIT track for students interested in networks, system security, and infrastructure.</p>
+        <div class="more-info"><h4>Related careers</h4><div class="chips small"><span>Network Administrator</span><span>Network Engineer</span><span>Information Security Administrator</span><span>Cybersecurity Analyst</span></div></div>
+        <span class="toggle">Careers</span>
+      </div>
+      <div class="mini track">
+        <div class="ic">🌐</div><span class="badge">BSIT</span><h3>Software Technology</h3>
+        <p>A BSIT track for students interested in building web and software applications.</p>
+        <div class="more-info"><h4>Related careers</h4><div class="chips small"><span>Programmer</span><span>Web Developer</span><span>Software Developer</span><span>Full-Stack Developer</span></div></div>
+        <span class="toggle">Careers</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="downloads" class="alt">
+<section id="downloads">
   <div class="container">
     <span class="eyebrow">Downloadable Curriculum / Course Prospectus</span>
     <h2>Take it with you</h2>
@@ -176,13 +196,9 @@
 </section>
 
 <footer>
-  <div class="container"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
-<script>
-document.querySelectorAll('section:not(.page-hero) .container > *, .mini, .dl, .program').forEach(e=>e.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
+<script src="script.js"></script>
 </body>
 </html>

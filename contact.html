@@ -13,7 +13,7 @@
 <header>
   <div class="container nav">
     <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
+    <button class="menu-btn" aria-label="Menu">☰</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -49,10 +49,17 @@
   <div class="container">
     <span class="eyebrow">Contact Information</span>
     <h2>Reach the college office</h2>
-    <p class="lead">Choose the way that works best for you.</p>
+    <p class="lead">Choose the way that works best for you. Tap a number or address to copy it.</p>
     <div class="info-grid">
-      <div class="info"><div class="ic">✉️</div><h3>Email address</h3><a href="mailto:cics@example.edu">cics@example.edu</a><p>[Admissions email, if different]</p></div>
-      <div class="info"><div class="ic">📞</div><h3>Office phone numbers</h3><a href="tel:+000000000">(000) 000-0000</a><a href="tel:+000000000">(000) 000-0000</a></div>
+      <div class="info"><div class="ic">✉️</div><h3>Email address</h3>
+        <button class="copy" data-copy="itdchair@dlsud.edu.ph">itdchair@dlsud.edu.ph</button>
+        <button class="copy" data-copy="jteduardo@dlsud.edu.ph">jteduardo@dlsud.edu.ph</button>
+      </div>
+      <div class="info"><div class="ic">📞</div><h3>Office phone numbers</h3>
+        <button class="copy" data-copy="+63 (46) 481.1900"><span>+63 (46) 481.1900 <small>Cavite line</small></span></button>
+        <button class="copy" data-copy="+63 (2) 8779.5180"><span>+63 (2) 8779.5180 <small>Manila line</small></span></button>
+        <button class="copy" data-copy="3073"><span>Local 3073 <small>Local number</small></span></button>
+      </div>
       <div class="info"><div class="ic">🕘</div><h3>Office hours</h3><p>Monday to Friday: [8:00 AM to 5:00 PM]</p><p>Saturday: [Hours or Closed]</p></div>
     </div>
   </div>
@@ -66,12 +73,11 @@
     <div class="map-wrap">
       <div class="address">
         <h3>College of Information and Computer Studies</h3>
-        <p>[Building / Room]<br>[Street Address]<br>[City, Province, Postal Code]</p>
-        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Your+Campus+Address" target="_blank" rel="noopener">Get Directions →</a>
+        <p>Room 312, Paulo Campos Hall<br>De La Salle University – Dasmariñas<br>Brgy. Fatima 1, Dasmariñas City, Cavite<br>Philippines, 4115</p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=De+La+Salle+University+Dasmari%C3%B1as" target="_blank" rel="noopener">Get Directions →</a>
       </div>
-      <!-- Replace the src with the Embed link from Google Maps: Share > Embed a map -->
       <div class="map">
-        <iframe title="Campus map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Your+Campus+Address&output=embed"></iframe>
+        <iframe title="Campus map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=De+La+Salle+University+Dasmari%C3%B1as&output=embed"></iframe>
       </div>
     </div>
   </div>
@@ -82,12 +88,15 @@
     <div>
       <span class="eyebrow">Inquiry Form</span>
       <h2>Send us a message</h2>
-      <p>Fill out the form and a member of our team will reply as soon as possible, usually within [2 working days].</p>
+      <p>Fill out the form and a member of our team will reply as soon as possible. Pick a topic to get started:</p>
+      <div class="topics" id="topics">
+        <button type="button">Admissions</button><button type="button">Programs</button><button type="button">Scholarships</button><button type="button">OJT</button><button type="button">Other</button>
+      </div>
     </div>
     <form class="inquiry" id="inquiryForm">
       <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your full name" required></div>
       <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
-      <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="How can we help?" required></textarea></div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" maxlength="600" placeholder="How can we help?" required></textarea><div class="count" id="count">0 / 600</div></div>
       <button class="btn btn-blue" type="submit">Send Message →</button>
       <div class="sent" id="sent" role="status">Thank you! Your message is ready to send in your email app.</div>
     </form>
@@ -108,23 +117,31 @@
 </section>
 
 <footer>
-  <div class="container"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
+<script src="script.js"></script>
 <script>
-// Static site: opens the visitor's email app with the message filled in.
-// Replace with a form service (e.g. Formspree) or a backend to send directly.
-document.getElementById('inquiryForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const f = e.target;
-  const body = encodeURIComponent('Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\n\n' + f.message.value);
-  document.getElementById('sent').classList.add('show');
-  window.location.href = 'mailto:cics@example.edu?subject=' + encodeURIComponent('Website inquiry from ' + f.name.value) + '&body=' + body;
-  f.reset();
-});
-document.querySelectorAll('section:not(.page-hero) .container > *, .info, .soc').forEach(e=>e.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+(() => {
+  const form = document.getElementById('inquiryForm'), msg = document.getElementById('message'), cnt = document.getElementById('count');
+  msg.addEventListener('input', () => cnt.textContent = msg.value.length + ' / 600');
+  let topic = '';
+  document.querySelectorAll('#topics button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#topics button').forEach(x => x.classList.toggle('on', x === b));
+    topic = b.textContent;
+    if (!msg.value) { msg.value = 'Hi CICS, I have a question about ' + topic.toLowerCase() + ': '; msg.dispatchEvent(new Event('input')); }
+    msg.focus();
+  }));
+  /* Static site: opens the visitor's email app with the message filled in. */
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const body = encodeURIComponent('Name: ' + form.name.value + '\nEmail: ' + form.email.value + '\n\n' + form.message.value);
+    const subject = encodeURIComponent((topic ? '[' + topic + '] ' : '') + 'Website inquiry from ' + form.name.value);
+    document.getElementById('sent').classList.add('show');
+    window.location.href = 'mailto:itdchair@dlsud.edu.ph?subject=' + subject + '&body=' + body;
+    form.reset(); cnt.textContent = '0 / 600';
+  });
+})();
 </script>
 </body>
 </html>

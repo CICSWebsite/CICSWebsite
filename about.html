@@ -12,7 +12,7 @@
 <header>
   <div class="container nav">
     <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
+    <button class="menu-btn" aria-label="Menu">☰</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -51,12 +51,12 @@
     <div>
       <span class="eyebrow">College Profile</span>
       <h2>Who we are</h2>
-      <p>[Overview of the College of Information and Computer Studies: what it offers, who it serves, and what makes it distinct.]</p>
-      <p>[Describe the learning environment, laboratories, and industry-aligned approach to computing education.]</p>
+      <p>The College of Information and Computer Studies (CICS) is a leader in technological education, committed to academic excellence, innovation, and high ethical standards.</p>
+      <p>Grounded in Lasallian values, CICS fosters a dynamic and inclusive environment where students, faculty, and industry partners collaborate to solve complex technological challenges. We inspire and empower future IT leaders to excel in their professions and shape a better global digital landscape.</p>
       <div class="facts">
-        <div><b>0000</b><span>Year founded</span></div>
-        <div><b>00+</b><span>Faculty members</span></div>
-        <div><b>0,000</b><span>Students enrolled</span></div>
+        <div><b>[Year]</b><span>Year founded</span></div>
+        <div><b data-count="31" data-suffix="+">31+</b><span>Faculty members</span></div>
+        <div><b data-count="2">2</b><span>Degree programs</span></div>
       </div>
     </div>
     <div class="photo" role="img" aria-label="College photo">[ Campus / college photo ]</div>
@@ -73,10 +73,10 @@
       <div class="mv"><div class="ic">🔭</div><h3>Vision</h3><p>[Insert the official CICS vision statement.]</p></div>
     </div>
     <div class="val-grid">
-      <div class="val"><div class="ic">💡</div><h3>Innovation</h3><p>[Short description]</p></div>
-      <div class="val"><div class="ic">🤝</div><h3>Integrity</h3><p>[Short description]</p></div>
-      <div class="val"><div class="ic">⭐</div><h3>Excellence</h3><p>[Short description]</p></div>
-      <div class="val"><div class="ic">🌐</div><h3>Service</h3><p>[Short description]</p></div>
+      <div class="val"><div class="ic">💡</div><h3>Innovation</h3><p>Pioneering new ideas and solutions in technology.</p></div>
+      <div class="val"><div class="ic">🤝</div><h3>High Ethical Standards</h3><p>Responsible, ethical use of computing in every discipline.</p></div>
+      <div class="val"><div class="ic">⭐</div><h3>Academic Excellence</h3><p>Rigorous, industry-aligned education in computing.</p></div>
+      <div class="val"><div class="ic">🌐</div><h3>Lasallian Values</h3><p>A dynamic, inclusive community grounded in Lasallian formation.</p></div>
     </div>
   </div>
 </section>
@@ -90,7 +90,7 @@
       <div class="tl"><span class="yr">YEAR</span><h3>[Founding of the department]</h3><p>[How and why the department began.]</p></div>
       <div class="tl"><span class="yr">YEAR</span><h3>[First program offered]</h3><p>[Description of the milestone.]</p></div>
       <div class="tl"><span class="yr">YEAR</span><h3>[Expansion or accreditation]</h3><p>[Description of the milestone.]</p></div>
-      <div class="tl"><span class="yr">TODAY</span><h3>[The college now]</h3><p>[Current programs, facilities, and direction.]</p></div>
+      <div class="tl"><span class="yr">TODAY</span><h3>The college now</h3><p>Offering BS Computer Science (with specializations in Game Development and Intelligent Systems) and BS Information Technology, with tracks in Network Technology and Software Technology.</p></div>
     </div>
   </div>
 </section>
@@ -118,15 +118,13 @@
       <div class="node top"><b>Dean</b><span>[Name]</span></div>
       <div class="stem"></div>
       <div class="row">
-        <div class="node"><b>Program Head</b><span>BSIT</span></div>
-        <div class="node"><b>Program Head</b><span>BSCS</span></div>
-        <div class="node"><b>Program Head</b><span>BSIS / Others</span></div>
+        <div class="node"><b>Program Head</b><span>BS Computer Science</span></div>
+        <div class="node"><b>Program Head</b><span>BS Information Technology</span></div>
       </div>
       <div class="stem"></div>
       <div class="row">
-        <div class="node"><b>Faculty Group</b><span>Software Development</span></div>
-        <div class="node"><b>Faculty Group</b><span>Networking &amp; Systems</span></div>
-        <div class="node"><b>Faculty Group</b><span>AI &amp; Data</span></div>
+        <div class="node"><b>Faculty Group</b><span>Computer Science (14)</span></div>
+        <div class="node"><b>Faculty Group</b><span>Information Technology (17)</span></div>
       </div>
     </div>
   </div>
@@ -155,13 +153,9 @@
 </section>
 
 <footer>
-  <div class="container"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
-<script>
-document.querySelectorAll('section:not(.page-hero) .container > *, .tl, .val, .logo-box, .node').forEach(e=>e.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
+<script src="script.js"></script>
 </body>
 </html>

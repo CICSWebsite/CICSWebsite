@@ -1,10 +1,17 @@
 /* Student Services page. Loaded after styles.css and pages.css */
 .steps { counter-reset: step; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
-.step { counter-increment: step; position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 56px 24px 26px; box-shadow: var(--shadow); transition: .3s; }
+.step { counter-increment: step; position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 56px 24px 26px; box-shadow: var(--shadow); transition: .3s; cursor: pointer; user-select: none; }
 .step:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.step::before { content: counter(step); position: absolute; top: 18px; left: 24px; width: 32px; height: 32px; border-radius: 10px; background: var(--grad); color: #fff; display: grid; place-items: center; font: 700 .9rem "Sora", sans-serif; }
+.step::before { content: counter(step); position: absolute; top: 18px; left: 24px; width: 32px; height: 32px; border-radius: 10px; background: var(--grad); color: #fff; display: grid; place-items: center; font: 700 .9rem "Sora", sans-serif; transition: .3s; }
+.step.done { border-color: var(--blue); background: var(--tint-2); }
+.step.done::before { content: "✓"; background: var(--gold); color: var(--navy); transform: rotate(360deg); }
+.step.done h3 { text-decoration: line-through; text-decoration-color: var(--blue); }
 .step h3 { font-size: 1.02rem; color: var(--navy); margin-bottom: 4px; }
 .step p { font-size: .9rem; color: var(--muted); }
+.step-progress { margin-top: 30px; max-width: 520px; }
+.step-progress .bar { height: 10px; border-radius: 99px; background: #cfe7d9; overflow: hidden; }
+.step-progress .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--blue), var(--cyan)); border-radius: 99px; transition: width .5s ease; }
+.step-progress p { font-size: .88rem; color: var(--muted); margin-top: 8px; }
 
 .advice { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: stretch; }
 .panel { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 34px; box-shadow: var(--shadow); }
@@ -12,19 +19,20 @@
 .panel h3 { font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
 .panel.dark h3 { color: #fff; }
 .panel p { color: var(--muted); margin-bottom: 14px; }
-.panel.dark p { color: #aebadb; }
+.panel.dark p { color: #a9c9b8; }
 .ticks { list-style: none; }
 .ticks li { position: relative; padding-left: 28px; margin-bottom: 10px; font-size: .95rem; color: var(--text); }
-.panel.dark .ticks li { color: #dbe4f7; }
-.ticks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: #e6ecff; color: var(--blue); font-size: .7rem; font-weight: 700; display: grid; place-items: center; }
+.panel.dark .ticks li { color: #d5eadd; }
+.ticks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--tint); color: var(--blue); font-size: .7rem; font-weight: 700; display: grid; place-items: center; }
 .panel.dark .ticks li::before { background: rgba(255,255,255,.15); color: var(--cyan); }
 
 .club-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
 .club { background: var(--card); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: .3s; }
 .club:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
-.club .top { height: 110px; display: grid; place-items: center; font-size: 2.6rem; background: var(--grad); }
-.club:nth-child(2) .top { background: linear-gradient(135deg, #0ea5c6, var(--blue)); }
-.club:nth-child(3) .top { background: linear-gradient(135deg, var(--violet), #d946ef); }
+.club .top { height: 110px; display: grid; place-items: center; font-size: 2.6rem; background: var(--grad); transition: transform .4s; }
+.club:hover .top { transform: scale(1.04); }
+.club:nth-child(2) .top { background: linear-gradient(135deg, #0ea5a6, var(--blue)); }
+.club:nth-child(3) .top { background: linear-gradient(135deg, #15803d, #84cc16); }
 .club .body { padding: 24px; }
 .club h3 { color: var(--navy); font-size: 1.15rem; }
 .club p { color: var(--muted); font-size: .92rem; margin: 6px 0 14px; }
@@ -32,14 +40,18 @@
 
 .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .booking { display: grid; gap: 12px; margin-top: 18px; }
-.booking div { display: flex; justify-content: space-between; gap: 12px; background: #f3f6ff; border-radius: 12px; padding: 12px 16px; font-size: .9rem; }
-.booking b { color: var(--navy); font-family: "Sora", sans-serif; }
+.booking div { display: flex; justify-content: space-between; gap: 12px; background: rgba(255,255,255,.08); border-radius: 12px; padding: 12px 16px; font-size: .9rem; color: #d5eadd; }
+.booking b { color: #fff; font-family: "Sora", sans-serif; }
 
+.faq-tools { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 22px; max-width: 860px; }
+.faq-tools .search { flex: 1 1 260px; }
+.faq-tools button.link { background: none; border: 0; color: var(--blue); font: 600 .9rem "Inter", sans-serif; cursor: pointer; }
 .acc { display: grid; gap: 14px; max-width: 860px; }
 .acc details { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+.acc details.hide { display: none; }
 .acc summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 20px 24px; font: 600 1.02rem "Sora", sans-serif; color: var(--navy); }
 .acc summary::-webkit-details-marker { display: none; }
-.acc summary .ic { width: 40px; height: 40px; border-radius: 12px; background: #eef1ff; display: grid; place-items: center; font-size: 1.1rem; flex: none; }
+.acc summary .ic { width: 40px; height: 40px; border-radius: 12px; background: var(--tint); display: grid; place-items: center; font-size: 1.1rem; flex: none; }
 .acc summary::after { content: "+"; margin-left: auto; font-size: 1.4rem; color: var(--blue); transition: transform .25s; }
 .acc details[open] summary::after { transform: rotate(45deg); }
 .acc details[open] { border-color: var(--blue); }

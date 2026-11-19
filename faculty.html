@@ -13,7 +13,7 @@
 <header>
   <div class="container nav">
     <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
+    <button class="menu-btn" aria-label="Menu">☰</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -48,95 +48,29 @@
   <div class="container">
     <span class="eyebrow">Faculty Directory</span>
     <h2>Our faculty</h2>
-    <p class="lead">Name, position, field of expertise, short bio, and research interests for each faculty member.</p>
-    <div class="filters" role="group" aria-label="Filter by expertise">
-      <button class="on" data-f="all">All</button>
-      <button data-f="Software">Software Development</button>
-      <button data-f="Networking">Networking &amp; Security</button>
-      <button data-f="AI">AI &amp; Data</button>
+    <p class="lead">Search by name or degree, filter by program or highest degree, and tap a card to see full credentials.</p>
+
+    <div class="fac-tools">
+      <div class="search"><input id="q" type="search" placeholder="Search name or degree…" aria-label="Search faculty"></div>
     </div>
-    <div class="fac-grid">
-      <article class="fac" data-field="Software">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 1]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">Software Development</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="Networking">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 2]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">Networking</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="AI">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 3]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">AI & Data</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="Software">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 4]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">Software Development</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="Networking">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 5]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">Cybersecurity</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="AI">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 6]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">AI & Data</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="Software">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 7]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">Software Development</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
-      <article class="fac" data-field="Networking">
-        <div class="pic" role="img" aria-label="Photo of faculty member">[ Photo ]</div>
-        <div class="info">
-          <h3>[Faculty Name 8]</h3>
-          <div class="pos">[Position, e.g. Associate Professor]</div>
-          <span class="field">Networking</span>
-          <p>[Short bio: education, years of experience, and teaching focus.]</p>
-          <div class="int"><b>Research interests:</b> [Topic one, topic two, topic three]</div>
-        </div>
-      </article>
+    <div class="filter-row">
+      <div><span class="lbl">Program</span>
+        <div class="filters" role="group" aria-label="Filter by program">
+          <button class="on" data-prog-btn="all">All</button>
+          <button data-prog-btn="CS">Computer Science</button>
+          <button data-prog-btn="IT">Information Technology</button>
+        </div></div>
+      <div><span class="lbl">Highest degree</span>
+        <div class="filters" role="group" aria-label="Filter by degree">
+          <button class="on" data-lvl-btn="all">All</button>
+          <button data-lvl-btn="Doctorate">Doctorate</button>
+          <button data-lvl-btn="Master's">Master's</button>
+          <button data-lvl-btn="Bachelor's">Bachelor's</button>
+        </div></div>
     </div>
+    <div class="fac-count" id="facCount"></div>
+    <div class="fac-grid"></div>
+    <div class="empty"><h3>No faculty match your search</h3><p>Try a different name or clear the filters.</p></div>
   </div>
 </section>
 
@@ -167,19 +101,13 @@
   </div>
 </section>
 
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Faculty profile"><div class="modal-box"></div></div>
+
 <footer>
-  <div class="container"><span>© 2026 College of Information and Computer Studies.</span><span>All rights reserved.</span></div>
+  <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
-<script>
-const btns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('.fac');
-btns.forEach(b=>b.addEventListener('click',()=>{
-  btns.forEach(x=>x.classList.toggle('on',x===b));
-  cards.forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.field!==b.dataset.f));
-}));
-document.querySelectorAll('section:not(.page-hero) .container > *, .staff, .lab').forEach(e=>e.classList.add('reveal'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-</script>
+<script src="script.js"></script>
+<script src="faculty.js"></script>
 </body>
 </html>
