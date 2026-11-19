@@ -82,3 +82,10 @@ svg.i { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width:
 .ic, .icon, .club .top { color: #fff; }
 .val .ic, .mini .ic, .ach-item .icon, .acc summary .ic, .float .ic { color: var(--blue); }
 .ach-item .icon svg.i { width: 1em; height: 1em; }
+
+/* Hero headline built from FuzzyText canvases. The canvas has transparent padding
+   (fuzzRange + 20 + inset) around the text, so pull it back to keep the text aligned. */
+.hero h1.fz-title { margin: 18px 0 22px; }
+.fz-line { display: block; margin: 0 0 4px -41px; width: max-content; max-width: none; }
+.fz-line canvas { display: block; max-width: none !important; }
+@media (max-width: 900px) { .fz-line { margin-left: -41px; } }

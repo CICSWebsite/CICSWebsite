@@ -230,7 +230,7 @@
       rows = new Int32Array(source.height + 1);
       cols = new Int32Array(canvas.width + 1);
       canvas.style.width = box.cssWidth + 'px';
-      canvas.style.height = box.cssHeight + 'px';
+      canvas.style.height = 'auto'; // keeps the aspect ratio if max-width shrinks the canvas
       canvas.style.maxWidth = '100%';
       if (introPending() && !introState.start) canvas.style.opacity = '0';
       ink = resolveInk();
