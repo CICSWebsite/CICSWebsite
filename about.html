@@ -6,24 +6,12 @@
   <title>About Us | College of Information and Computer Studies</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="cardnav.css">
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="programs.html">Academic Programs</a></li>
-        <li><a href="faculty.html">Faculty &amp; Staff</a></li>
-        <li><a href="services.html">Student Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="cn-host">
+  <div data-cardnav></div>
 </header>
 
 <section class="page-hero">
@@ -69,14 +57,14 @@
     <h2>What drives us</h2>
     <p class="lead">The purpose, direction, and principles that guide every program and decision.</p>
     <div class="mv-grid">
-      <div class="mv"><div class="ic">🎯</div><h3>Mission</h3><p>[Insert the official CICS mission statement.]</p></div>
-      <div class="mv"><div class="ic">🔭</div><h3>Vision</h3><p>[Insert the official CICS vision statement.]</p></div>
+      <div class="mv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3>Mission</h3><p>[Insert the official CICS mission statement.]</p></div>
+      <div class="mv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Vision</h3><p>[Insert the official CICS vision statement.]</p></div>
     </div>
     <div class="val-grid">
-      <div class="val"><div class="ic">💡</div><h3>Innovation</h3><p>Pioneering new ideas and solutions in technology.</p></div>
-      <div class="val"><div class="ic">🤝</div><h3>High Ethical Standards</h3><p>Responsible, ethical use of computing in every discipline.</p></div>
-      <div class="val"><div class="ic">⭐</div><h3>Academic Excellence</h3><p>Rigorous, industry-aligned education in computing.</p></div>
-      <div class="val"><div class="ic">🌐</div><h3>Lasallian Values</h3><p>A dynamic, inclusive community grounded in Lasallian formation.</p></div>
+      <div class="val"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2.3h6c0-1.1.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg></div><h3>Innovation</h3><p>Pioneering new ideas and solutions in technology.</p></div>
+      <div class="val"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3>High Ethical Standards</h3><p>Responsible, ethical use of computing in every discipline.</p></div>
+      <div class="val"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>Academic Excellence</h3><p>Rigorous, industry-aligned education in computing.</p></div>
+      <div class="val"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>Lasallian Values</h3><p>A dynamic, inclusive community grounded in Lasallian formation.</p></div>
     </div>
   </div>
 </section>
@@ -156,6 +144,7 @@
   <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
+<script src="cardnav.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

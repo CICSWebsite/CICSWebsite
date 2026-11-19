@@ -5,24 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>College of Information and Computer Studies</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cardnav.css">
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a href="index.html" class="logo"><i>⌘</i><div>CI<span>CS</span></div></a>
-    <button class="menu-btn" aria-label="Menu">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Academic Programs</a></li>
-        <li><a href="faculty.html">Faculty &amp; Staff</a></li>
-        <li><a href="services.html">Student Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+<header class="cn-host">
+  <div data-cardnav></div>
 </header>
 
 <!-- 1. College Banner -->
@@ -30,7 +18,11 @@
   <div class="container hero-grid">
     <div>
       <span class="eyebrow">College of Information and Computer Studies</span>
-      <h1>Power the digital world with <em><span data-typed="innovation.|code.|intelligence.|creativity.">innovation.</span></em></h1>
+      <h1 class="fz-title" id="heroTitle" aria-label="Power the digital world with innovation.">
+        <span class="fz-line" id="fz1">Power the digital</span>
+        <span class="fz-line" id="fz2">world with</span>
+        <span class="fz-line" id="fz3">innovation.</span>
+      </h1>
       <p>Grounded in Lasallian values, CICS inspires and empowers future IT leaders to excel in their professions and shape a better global digital landscape.</p>
       <div class="hero-actions"><a href="#about" class="btn btn-primary">Learn More →</a><a href="programs.html" class="btn btn-outline">Explore Programs</a></div>
     </div>
@@ -45,16 +37,11 @@
           <div class="code-line" style="animation-delay:2.7s"><span class="k">return</span> <span class="s">"Graduate"</span>;</div>
         </div>
       </div>
-      <div class="float b"><div class="ic">🏆</div><div>Leading Innovation<small>Pioneering Excellence</small></div></div>
-      <div class="float a"><div class="ic">💼</div><div>Industry-ready<small>Partner internships</small></div></div>
+      <div class="float b"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><div>Leading Innovation<small>Pioneering Excellence</small></div></div>
+      <div class="float a"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div>Industry-ready<small>Partner internships</small></div></div>
     </div>
   </div>
 </section>
-
-<div class="marquee" aria-hidden="true"><div>
-  <span>Leading Innovation</span><span>✦</span><span>Pioneering Excellence</span><span>✦</span><span>Lasallian Values</span><span>✦</span><span>Computer Science</span><span>✦</span><span>Information Technology</span><span>✦</span>
-  <span>Leading Innovation</span><span>✦</span><span>Pioneering Excellence</span><span>✦</span><span>Lasallian Values</span><span>✦</span><span>Computer Science</span><span>✦</span><span>Information Technology</span><span>✦</span>
-</div></div>
 
 <!-- 2. About the College -->
 <section id="about">
@@ -81,10 +68,10 @@
     <h2>Find your path</h2>
     <p class="lead">Explore our degree programs and choose the track that fits your goals.</p>
     <div class="prog-grid">
-      <a class="prog" href="programs.html#bsit"><div class="ic">💻</div><h3>BSIT</h3><p>Bachelor of Science in Information Technology</p><span class="more">View program →</span></a>
-      <a class="prog" href="programs.html#bscs"><div class="ic">🧠</div><h3>BSCS</h3><p>Bachelor of Science in Computer Science</p><span class="more">View program →</span></a>
-      <a class="prog" href="programs.html#tracks"><div class="ic">🎮</div><h3>Game Development</h3><p>BSCS with Specialization in Game Development</p><span class="more">View track →</span></a>
-      <a class="prog" href="programs.html#tracks"><div class="ic">🤖</div><h3>Intelligent Systems</h3><p>BSCS with Specialization in Intelligent Systems (AI)</p><span class="more">View track →</span></a>
+      <a class="prog" href="programs.html#bsit"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>BSIT</h3><p>Bachelor of Science in Information Technology</p><span class="more">View program →</span></a>
+      <a class="prog" href="programs.html#bscs"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3>BSCS</h3><p>Bachelor of Science in Computer Science</p><span class="more">View program →</span></a>
+      <a class="prog" href="programs.html#tracks"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div><h3>Game Development</h3><p>BSCS with Specialization in Game Development</p><span class="more">View track →</span></a>
+      <a class="prog" href="programs.html#tracks"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><h3>Intelligent Systems</h3><p>BSCS with Specialization in Intelligent Systems (AI)</p><span class="more">View track →</span></a>
     </div>
   </div>
 </section>
@@ -118,10 +105,10 @@
     <h2>Proud of our students</h2>
     <p class="lead">Awards, certifications, and competition wins that showcase our community.</p>
     <div class="ach-grid">
-      <div class="ach-item"><div class="icon">🏆</div><h3>[Award title]</h3><p>[Student / team name, year]</p></div>
-      <div class="ach-item"><div class="icon">🎓</div><h3>[Certification]</h3><p>[Number of students certified]</p></div>
-      <div class="ach-item"><div class="icon">💻</div><h3>[Programming competition]</h3><p>[Placement, event, year]</p></div>
-      <div class="ach-item"><div class="icon">🤖</div><h3>[Robotics / research recognition]</h3><p>[Details]</p></div>
+      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><h3>[Award title]</h3><p>[Student / team name, year]</p></div>
+      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><h3>[Certification]</h3><p>[Number of students certified]</p></div>
+      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>[Programming competition]</h3><p>[Placement, event, year]</p></div>
+      <div class="ach-item"><div class="icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><h3>[Robotics / research recognition]</h3><p>[Details]</p></div>
     </div>
   </div>
 </section>
@@ -143,6 +130,33 @@
   <div class="container"><span>© 2026 College of Information and Computer Studies. De La Salle University – Dasmariñas.</span><span>All rights reserved.</span></div>
 </footer>
 
+<script src="fuzzy-text.js"></script>
+<script>
+  // Hero headline: one FuzzyText canvas per line. The last word cycles, each new word resolving out of static.
+  (function () {
+    var base = {
+      fontSize: 'clamp(2.4rem, 5vw, 4.1rem)', fontWeight: 800, fontFamily: 'Sora, sans-serif',
+      fuzzRange: 16, baseIntensity: 0.15, hoverIntensity: 0.5, direction: 'horizontal',
+      sliceSize: 1, fps: 60, trigger: 'hover', intro: true, introDuration: 1400
+    };
+    var title = document.getElementById('heroTitle');
+    FuzzyText(document.getElementById('fz1'), 'Power the digital', Object.assign({}, base, { color: '#ffffff' }));
+    FuzzyText(document.getElementById('fz2'), 'world with', Object.assign({}, base, { color: '#ffffff' }));
+
+    var words = ['innovation.', 'code.', 'intelligence.', 'creativity.'];
+    var host = document.getElementById('fz3');
+    var current = null, k = 0;
+    function show() {
+      if (current) current.destroy();
+      current = FuzzyText(host, words[k], Object.assign({}, base, { gradient: ['#6ee7a8', '#a7f3d0', '#ffc233'] }));
+      title.setAttribute('aria-label', 'Power the digital world with ' + words[k]);
+    }
+    show();
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) setInterval(function () { k = (k + 1) % words.length; show(); }, 4200);
+  })();
+</script>
+<script src="cardnav.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

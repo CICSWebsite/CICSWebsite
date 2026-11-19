@@ -1,9 +1,8 @@
 /* Faculty & Staff page. Loaded after styles.css and pages.css */
 .fac-tools { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 18px; }
 .search { position: relative; flex: 1 1 280px; max-width: 420px; }
-.search input { width: 100%; font: 400 1rem "Inter", sans-serif; padding: 14px 18px 14px 46px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--card); transition: .2s; }
+.search input { width: 100%; font: 400 1rem "Inter", sans-serif; padding: 14px 22px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--card); transition: .2s; }
 .search input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(11,138,82,.14); }
-.search::before { content: "🔍"; position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: .95rem; }
 .fac-count { color: var(--muted); font-size: .9rem; margin: 6px 0 22px; }
 .fac-count b { color: var(--blue); }
 .filter-row { display: flex; gap: 22px; flex-wrap: wrap; }
@@ -65,3 +64,17 @@
 .lab .meta { display: flex; flex-wrap: wrap; gap: 8px; }
 .lab .meta span { font-size: .78rem; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); color: #d5eadd; }
 .lab .lead-by { margin-top: 18px; font-size: .85rem; color: var(--gold); font-weight: 600; }
+
+/* Filter toolbar: one clean panel instead of loose pills */
+.fac-tools { margin-bottom: 14px; }
+.filter-row { gap: 0 40px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 18px 26px 8px; box-shadow: var(--shadow); }
+.filter-row > div { padding-bottom: 12px; }
+.filter-row > div + div { padding-left: 40px; border-left: 1px solid var(--line); }
+.filter-row .filters { margin-bottom: 0; gap: 6px; }
+.filter-row .filters button { padding: 8px 16px; font-size: .85rem; }
+.filter-row .filters button.on { box-shadow: 0 4px 12px rgba(11, 138, 82, .28); }
+.fac-count { margin: 16px 4px 26px; }
+@media (max-width: 700px) {
+  .filter-row > div { width: 100%; }
+  .filter-row > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); padding-top: 14px; }
+}
