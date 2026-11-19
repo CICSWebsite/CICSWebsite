@@ -353,8 +353,8 @@
         stagger: 0.12, bounce: 0.2, speed: 1, cardHeight: 176, maxWidth: 820,
         accentColor: '#ffc233', menuLabel: true, intro: true,
         vars: {
-          '--cn-panel': 'rgba(9, 20, 48, 0.74)', '--cn-solid': '#0d1b3e', '--cn-logo': '40px',
-          '--cn-tile': 'linear-gradient(180deg, #162a60 0%, #0d1b3e 100%)',
+          '--cn-panel': 'rgba(5,30,19, 0.74)', '--cn-solid': '#0a2e1c', '--cn-logo': '40px',
+          '--cn-tile': 'linear-gradient(180deg, #12462c 0%, #0a2e1c 100%)',
           '--cn-edge': 'rgba(255, 255, 255, 0.12)'
         }
       });
