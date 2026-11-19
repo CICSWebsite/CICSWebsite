@@ -173,11 +173,21 @@ header.cn-host .card-nav { top: 12px; width: calc(100% - 24px); }
 /* Content now starts at the top of the page, so give heroes room under the bar. */
 .hero { padding-top: 160px; }
 .page-hero { padding-top: 136px; }
-.subnav { top: 84px; }
+.subnav { top: 72px; }
 .nf { min-height: 100vh; padding-top: 100px; }
 
 @media (max-width: 900px) {
   .hero { padding-top: 130px; }
   .page-hero { padding-top: 120px; }
-  .subnav { top: 84px; }
+  .subnav { top: 72px; }
 }
+
+/* Solid strip behind the floating bar once the page scrolls, so content never shows around or behind it. */
+header.cn-host::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 72px; z-index: -1;
+  background: linear-gradient(180deg, rgba(4, 23, 15, .98), rgba(4, 23, 15, .94));
+  box-shadow: 0 8px 24px -10px rgba(4, 23, 15, .55);
+  opacity: 0; transition: opacity .3s ease; pointer-events: none;
+}
+header.cn-host.scrolled::before { opacity: 1; }
+.card-nav__panel { box-shadow: var(--cn-shadow), 0 0 0 1px rgba(110, 231, 168, .14); }
