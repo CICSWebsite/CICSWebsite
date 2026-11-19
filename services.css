@@ -12,11 +12,11 @@
 .panel h3 { font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
 .panel.dark h3 { color: #fff; }
 .panel p { color: var(--muted); margin-bottom: 14px; }
-.panel.dark p { color: #aebadb; }
+.panel.dark p { color: #a9cdb8; }
 .ticks { list-style: none; }
 .ticks li { position: relative; padding-left: 28px; margin-bottom: 10px; font-size: .95rem; color: var(--text); }
-.panel.dark .ticks li { color: #dbe4f7; }
-.ticks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: #e6ecff; color: var(--blue); font-size: .7rem; font-weight: 700; display: grid; place-items: center; }
+.panel.dark .ticks li { color: #d4eede; }
+.ticks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: #dcf2e5; color: var(--blue); font-size: .7rem; font-weight: 700; display: grid; place-items: center; }
 .panel.dark .ticks li::before { background: rgba(255,255,255,.15); color: var(--cyan); }
 
 .club-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
@@ -32,14 +32,14 @@
 
 .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .booking { display: grid; gap: 12px; margin-top: 18px; }
-.booking div { display: flex; justify-content: space-between; gap: 12px; background: #f3f6ff; border-radius: 12px; padding: 12px 16px; font-size: .9rem; }
+.booking div { display: flex; justify-content: space-between; gap: 12px; background: #f1f8f4; border-radius: 12px; padding: 12px 16px; font-size: .9rem; }
 .booking b { color: var(--navy); font-family: "Sora", sans-serif; }
 
 .acc { display: grid; gap: 14px; max-width: 860px; }
 .acc details { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
 .acc summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 20px 24px; font: 600 1.02rem "Sora", sans-serif; color: var(--navy); }
 .acc summary::-webkit-details-marker { display: none; }
-.acc summary .ic { width: 40px; height: 40px; border-radius: 12px; background: #eef1ff; display: grid; place-items: center; font-size: 1.1rem; flex: none; }
+.acc summary .ic { width: 40px; height: 40px; border-radius: 12px; background: #e8f6ee; display: grid; place-items: center; font-size: 1.1rem; flex: none; }
 .acc summary::after { content: "+"; margin-left: auto; font-size: 1.4rem; color: var(--blue); transition: transform .25s; }
 .acc details[open] summary::after { transform: rotate(45deg); }
 .acc details[open] { border-color: var(--blue); }

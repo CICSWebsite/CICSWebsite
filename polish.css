@@ -8,21 +8,21 @@ body { animation: pagein .5s ease both; }
 .btn:focus-visible, .filters button:focus-visible { outline-offset: 4px; }
 
 /* Scroll progress bar */
-.progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 100; background: linear-gradient(90deg, var(--cyan), var(--violet), var(--gold)); box-shadow: 0 0 12px rgba(124,77,255,.7); transition: width .1s linear; }
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 100; background: linear-gradient(90deg, var(--cyan), var(--violet), var(--gold)); box-shadow: 0 0 12px rgba(11,107,58,.7); transition: width .1s linear; }
 
 /* Header gets a shadow and tighter height after scrolling */
 header { transition: background .3s, box-shadow .3s; }
-header.scrolled { background: rgba(7,15,36,.94); box-shadow: 0 10px 30px rgba(7,15,36,.35); }
+header.scrolled { background: rgba(4,23,15,.94); box-shadow: 0 10px 30px rgba(4,23,15,.35); }
 nav a { position: relative; }
 nav a.active::after { content: ""; position: absolute; left: 50%; bottom: 2px; width: 18px; height: 3px; transform: translateX(-50%); border-radius: 3px; background: var(--gold); }
 
 /* Back to top */
-.to-top { position: fixed; right: 22px; bottom: 22px; width: 48px; height: 48px; border: 0; border-radius: 50%; background: var(--grad); color: #fff; font-size: 1.2rem; cursor: pointer; z-index: 60; box-shadow: 0 12px 30px rgba(59,91,255,.45); opacity: 0; transform: translateY(20px); pointer-events: none; transition: .3s; }
+.to-top { position: fixed; right: 22px; bottom: 22px; width: 48px; height: 48px; border: 0; border-radius: 50%; background: var(--grad); color: #fff; font-size: 1.2rem; cursor: pointer; z-index: 60; box-shadow: 0 12px 30px rgba(15,157,88,.45); opacity: 0; transform: translateY(20px); pointer-events: none; transition: .3s; }
 .to-top.show { opacity: 1; transform: none; pointer-events: auto; }
 .to-top:hover { transform: translateY(-4px); }
 
 /* Animated glow blobs behind heroes */
-.hero::after, .page-hero::after { content: ""; position: absolute; width: 420px; height: 420px; left: -120px; bottom: -160px; border-radius: 50%; background: radial-gradient(circle, rgba(34,211,238,.35), transparent 70%); filter: blur(10px); animation: drift 14s ease-in-out infinite alternate; pointer-events: none; }
+.hero::after, .page-hero::after { content: ""; position: absolute; width: 420px; height: 420px; left: -120px; bottom: -160px; border-radius: 50%; background: radial-gradient(circle, rgba(110,231,168,.35), transparent 70%); filter: blur(10px); animation: drift 14s ease-in-out infinite alternate; pointer-events: none; }
 @keyframes drift { to { transform: translate(120px, -60px) scale(1.2); } }
 .hero > .container, .page-hero > .container { z-index: 1; }
 
@@ -32,7 +32,7 @@ h2::after { content: ""; display: block; width: 56px; height: 4px; margin-top: 1
 .cta h2::after { margin-inline: auto; }
 
 /* Placeholder boxes: striped so they read as "image goes here" */
-.photo, .hero-img, .fac .pic { background-image: repeating-linear-gradient(45deg, rgba(59,91,255,.07) 0 12px, transparent 12px 24px), linear-gradient(135deg, #dfe6ff, #efe6ff); }
+.photo, .hero-img, .fac .pic { background-image: repeating-linear-gradient(45deg, rgba(15,157,88,.07) 0 12px, transparent 12px 24px), linear-gradient(135deg, #d6efe0, #e0f1e6); }
 .photo, .fac .pic { font-weight: 600; letter-spacing: .04em; }
 
 /* Card hover: gradient border glow */
@@ -46,11 +46,11 @@ h2::after { content: ""; display: block; width: 56px; height: 4px; margin-top: 1
 .btn:hover::after { left: 140%; }
 
 /* Subnav: soft shadow and active link */
-.subnav { box-shadow: 0 6px 20px rgba(13,27,62,.05); }
+.subnav { box-shadow: 0 6px 20px rgba(10,46,28,.05); }
 .subnav a.on { background: var(--grad); color: #fff; }
 
 /* Richer footer */
-footer.foot { background: linear-gradient(180deg, var(--navy-2), var(--navy)); color: #9fb0cc; padding: 64px 0 0; font-size: .92rem; }
+footer.foot { background: linear-gradient(180deg, var(--navy-2), var(--navy)); color: #8fb8a2; padding: 64px 0 0; font-size: .92rem; }
 footer.foot .container { display: block; }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr 1fr; gap: 40px; padding-bottom: 44px; }
 .foot h4 { font: 700 .78rem "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #fff; margin-bottom: 16px; }

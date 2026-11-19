@@ -1,22 +1,22 @@
 /* Inner pages (About, Programs, ...). Loaded after styles.css */
-.page-hero { background: radial-gradient(800px 400px at 85% 0%, rgba(124,77,255,.5), transparent 60%), linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 84px 0 90px; overflow: hidden; }
+.page-hero { background: radial-gradient(800px 400px at 85% 0%, rgba(11,107,58,.5), transparent 60%), linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 84px 0 90px; overflow: hidden; }
 .page-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 52px 52px; mask-image: radial-gradient(ellipse at 70% 30%, #000 10%, transparent 70%); }
 .page-hero .container { position: relative; }
 .page-hero .eyebrow { color: var(--cyan); }
 .page-hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1.1; margin: 14px 0 16px; }
-.page-hero p { color: #b9c5e0; max-width: 560px; font-size: 1.1rem; }
-.crumbs { font-size: .85rem; color: #8ea0c8; margin-bottom: 8px; }
+.page-hero p { color: #b4d6c2; max-width: 560px; font-size: 1.1rem; }
+.crumbs { font-size: .85rem; color: #86b49b; margin-bottom: 8px; }
 .crumbs a:hover { color: #fff; }
 
 .subnav { position: sticky; top: 72px; z-index: 40; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .subnav .container { display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
 .subnav a { white-space: nowrap; font-size: .85rem; font-weight: 500; color: var(--muted); padding: 8px 16px; border-radius: 999px; transition: .2s; }
-.subnav a:hover { background: #eef1ff; color: var(--blue); }
+.subnav a:hover { background: #e8f6ee; color: var(--blue); }
 
-.alt { background: #eef2ff; }
+.alt { background: #eaf6ef; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .split p { color: var(--muted); margin-bottom: 16px; }
-.photo { aspect-ratio: 4/3.2; border-radius: 24px; background: linear-gradient(135deg, #dfe6ff, #efe6ff); border: 1px solid var(--line); box-shadow: var(--shadow-lg); display: grid; place-items: center; color: var(--muted); font-size: .9rem; text-align: center; padding: 20px; }
+.photo { aspect-ratio: 4/3.2; border-radius: 24px; background: linear-gradient(135deg, #d6efe0, #e0f1e6); border: 1px solid var(--line); box-shadow: var(--shadow-lg); display: grid; place-items: center; color: var(--muted); font-size: .9rem; text-align: center; padding: 20px; }
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
 .facts div { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
 .facts b { display: block; font: 800 1.5rem "Sora", sans-serif; color: var(--blue); }
@@ -31,7 +31,7 @@
 .val-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
 .val { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; transition: .3s; }
 .val:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.val .ic { background: #eef1ff; }
+.val .ic { background: #e8f6ee; }
 .val h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 4px; }
 .val p { font-size: .9rem; }
 
@@ -63,7 +63,7 @@
 .org .row .node::before { content: ""; position: absolute; top: -28px; left: 50%; width: 2px; height: 28px; background: var(--blue); opacity: .4; }
 
 .logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-bottom: 36px; }
-.logo-box { height: 110px; border: 1.5px dashed #b8c4e6; border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; text-align: center; color: var(--muted); font-size: .85rem; padding: 10px; transition: .3s; }
+.logo-box { height: 110px; border: 1.5px dashed #a9d3b9; border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; text-align: center; color: var(--muted); font-size: .85rem; padding: 10px; transition: .3s; }
 .logo-box:hover { border-color: var(--blue); background: #fff; transform: translateY(-4px); }
 .logo-box b { display: block; color: var(--navy); font-family: "Sora", sans-serif; }
 .acc-title { font: 700 .8rem "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin: 8px 0 14px; }
@@ -78,15 +78,15 @@
 .program-body h4 { font: 700 .78rem "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
 .program-body p { color: var(--muted); font-size: .95rem; }
 .years { display: grid; gap: 10px; }
-.years div { display: flex; gap: 12px; align-items: baseline; background: #f3f6ff; border-radius: 12px; padding: 10px 14px; font-size: .9rem; color: var(--text); }
+.years div { display: flex; gap: 12px; align-items: baseline; background: #f1f8f4; border-radius: 12px; padding: 10px 14px; font-size: .9rem; color: var(--text); }
 .years b { font-family: "Sora", sans-serif; color: var(--blue); min-width: 52px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chips span { background: #eef1ff; color: var(--blue); font-size: .85rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; }
+.chips span { background: #e8f6ee; color: var(--blue); font-size: .85rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; }
 
 .mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
 .mini { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); transition: .3s; }
 .mini:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.mini .ic { width: 50px; height: 50px; border-radius: 15px; background: #eef1ff; display: grid; place-items: center; font-size: 1.4rem; margin-bottom: 16px; }
+.mini .ic { width: 50px; height: 50px; border-radius: 15px; background: #e8f6ee; display: grid; place-items: center; font-size: 1.4rem; margin-bottom: 16px; }
 .mini h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 6px; }
 .mini p { color: var(--muted); font-size: .93rem; }
 .badge { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: #fff4d6; color: #a06a00; margin-bottom: 12px; }
