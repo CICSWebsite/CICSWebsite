@@ -23,8 +23,6 @@
 .club { background: var(--card); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: .3s; }
 .club:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
 .club .top { height: 110px; display: grid; place-items: center; font-size: 2.6rem; background: var(--grad); }
-.club:nth-child(2) .top { background: linear-gradient(135deg, #0ea5c6, var(--blue)); }
-.club:nth-child(3) .top { background: linear-gradient(135deg, var(--violet), #d946ef); }
 .club .body { padding: 24px; }
 .club h3 { color: var(--navy); font-size: 1.15rem; }
 .club p { color: var(--muted); font-size: .92rem; margin: 6px 0 14px; }

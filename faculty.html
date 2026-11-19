@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="polish.css">
   <link rel="icon" href="photos/logo.jpg">
   <link rel="stylesheet" href="cardnav.css">
+  <link rel="stylesheet" href="bouncecards.css">
 </head>
 <body>
 
@@ -36,9 +37,16 @@
 
 <section id="directory">
   <div class="container">
-    <span class="eyebrow">Faculty Directory</span>
-    <h2>Our faculty</h2>
-    <p class="lead">Our full-time faculty in the Information Technology and Computer Science departments.</p>
+    <div class="dir-head">
+      <div>
+        <span class="eyebrow">Faculty Directory</span>
+        <h2>Our faculty</h2>
+        <p class="lead">Our full-time faculty in the Information Technology and Computer Science departments. Hover a card to look closer.</p>
+      </div>
+      <div class="bc-wrap" aria-hidden="true">
+        <div data-bounce-cards data-bounce-cards-options='{"images":[{"src":"photos/faculty-1.svg","alt":"Faculty photo 1 [PLACEHOLDER]"},{"src":"photos/faculty-2.svg","alt":"Faculty photo 2 [PLACEHOLDER]"},{"src":"photos/faculty-3.svg","alt":"Faculty photo 3 [PLACEHOLDER]"},{"src":"photos/faculty-4.svg","alt":"Faculty photo 4 [PLACEHOLDER]"},{"src":"photos/faculty-5.svg","alt":"Faculty photo 5 [PLACEHOLDER]"}],"containerWidth":440,"containerHeight":300,"cardSize":160,"spread":72,"rotation":10,"arc":0,"pushDistance":140,"hoverScale":1.06,"bounciness":0.6,"animationDelay":0.5,"animationStagger":0.06,"borderWidth":5,"borderColor":"#ffffff","radius":22,"shadow":true,"enableHover":true}'></div>
+      </div>
+    </div>
     <div class="filters" role="group" aria-label="Filter by department">
       <button class="on" data-f="all">All (17)</button>
       <button data-f="IT">Information Technology (10)</button>
@@ -297,6 +305,7 @@ document.querySelectorAll('section:not(.page-hero) .container > *, .staff, .lab'
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 </script>
+<script src="bouncecards.js"></script>
 <script src="cardnav.js"></script>
 <script src="polish.js"></script>
 </body>
