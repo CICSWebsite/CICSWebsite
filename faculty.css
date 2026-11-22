@@ -33,7 +33,7 @@
 .modal.show { display: grid; animation: fadeUp .25s ease; }
 .modal-box { background: var(--card); border-radius: 28px; width: min(520px, 100%); max-height: 90vh; overflow: auto; box-shadow: var(--shadow-lg); }
 .modal-top { background: var(--grad); color: #fff; padding: 34px 32px; position: relative; display: flex; gap: 18px; align-items: center; }
-.modal-top .av-lg { position: static; width: 72px; height: 72px; flex: none; }
+.modal-top .av-lg { position: static; width: 72px; height: 72px; flex: none; border-radius: 50%; background: #fff; color: var(--blue); display: grid; place-items: center; font: 800 1.4rem "Sora", sans-serif; overflow: hidden; }
 .modal-top h3 { font-size: 1.3rem; line-height: 1.25; }
 .modal-top small { opacity: .85; }
 .modal-x { position: absolute; top: 14px; right: 16px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: rgba(255,255,255,.2); color: #fff; font-size: 1.1rem; cursor: pointer; }
