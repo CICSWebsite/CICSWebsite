@@ -40,96 +40,618 @@
     <p class="lead">Switch between programs to compare descriptions, goals, curriculum, and career paths.</p>
 
     <div data-tabs>
-      <div class="tab-list">
-        <button class="on" data-tab="bscs"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> BS Computer Science</button>
-        <button data-tab="bsit"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> BS Information Technology</button>
+      <div class="tab-list program-switcher">
+        <button class="program-switcher-btn on" data-tab="bscs"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> BS Computer Science (BSCS)</button>
+        <button class="program-switcher-btn" data-tab="bsit"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> BS Information Technology (BSIT)</button>
       </div>
 
-      <!-- BSCS -->
+      <!-- ========================================================
+           BSCS - BACHELOR OF SCIENCE IN COMPUTER SCIENCE
+           ======================================================== -->
       <article class="program tab-panel on" id="bscs" data-panel="bscs">
+        <!-- Program Header Banner -->
         <div class="program-head">
-          <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-          <div><h3>BS Computer Science (BSCS)</h3><small>Bachelor of Science in Computer Science</small></div>
-        </div>
-        <div class="program-body">
-          <div>
-            <h4>Program Description</h4>
-            <p>The BSCS program prepares students to be highly competent and certified in the areas of computing theory and applications. It trains them in abstract reasoning, analytical thinking, and research, with tracks in Robotics or Mobile and Game Development.</p>
-            <p>Specializations are also offered in <b>Game Development</b> and <b>Intelligent Systems</b> (see below).</p>
+          <div class="program-head-top">
+            <span class="program-head-badge">Undergraduate Degree &bull; CICS</span>
+            <span class="program-head-abbr">BSCS</span>
           </div>
-          <div>
-            <h4>Curriculum Overview</h4>
-            <div class="years">
-              <div><b>Year 1</b><span class="todo">[Subjects to be added]</span></div>
-              <div><b>Year 2</b><span class="todo">[Subjects to be added]</span></div>
-              <div><b>Year 3</b><span class="todo">[Subjects to be added]</span></div>
-              <div><b>Year 4</b><span class="todo">[Subjects to be added]</span></div>
+          <div class="program-head-main">
+            <div class="program-head-icon">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div class="program-head-text">
+              <h3>Bachelor of Science in Computer Science</h3>
+              <p class="program-subtitle">Department of Computer Studies &bull; De La Salle University &ndash; Dasmari&ntilde;as</p>
             </div>
           </div>
-          <div>
-            <h4>Career Options</h4>
-            <div class="chips"><span>Application / Game Developer</span><span>CS Instructor</span><span>Researcher</span><span>Trainer</span><span>Database Programmer / Designer</span><span>Mobile Application Developer</span><span>Systems Analyst</span></div>
+          <div class="program-meta-chips">
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 Years Full-Time</span>
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> PAASCU Level IV Accredited</span>
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> 2 Specialization Tracks</span>
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Industry Practicum</span>
           </div>
         </div>
-        <div class="goals">
-          <div class="goals-title">Program Goals</div>
-          <div class="goal-grid">
-            <div class="goal">Apply concepts of computing and mathematics in different domains of computer science.</div>
-            <div class="goal">Design, develop, test and evaluate various solutions using algorithms for complex computing problems that take full advantage of the usability of computer resources.</div>
-            <div class="goal">Document computer-based systems by writing effective reports for risk-assessment impact.</div>
-            <div class="goal">Communicate effectively with computing and non-computer science professionals about computing activities.</div>
-            <div class="goal">Recognize the legal, social, ethical, and professional issues involved in the utilization of computer technology and address these issues.</div>
-            <div class="goal">Engage in continuing professional development through performing independent or collaborative research as computing professionals.</div>
+
+        <!-- Program Overview: Description & Career Options -->
+        <div class="program-overview">
+          <div class="program-desc-block">
+            <h4>Program Description</h4>
+            <p class="desc-lead">The BSCS program prepares students to be highly competent and certified in the areas of computing theory and applications.</p>
+            <p>It trains them in abstract reasoning, analytical thinking, and research, with specialized tracks in Robotics, Mobile, and Game Development.</p>
+            <div class="specialization-banner">
+              <b>Available Specialization Tracks:</b>
+              <div class="specialization-tags">
+                <span class="spec-tag">Game Development</span>
+                <span class="spec-tag">Intelligent Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program-careers-block">
+            <h4>Career Opportunities</h4>
+            <p class="careers-sub">Graduates of the BSCS program pursue roles such as:</p>
+            <div class="career-pills">
+              <span class="career-pill">Application / Game Developer</span>
+              <span class="career-pill">CS Instructor</span>
+              <span class="career-pill">Researcher</span>
+              <span class="career-pill">Trainer</span>
+              <span class="career-pill">Database Programmer / Designer</span>
+              <span class="career-pill">Mobile Application Developer</span>
+              <span class="career-pill">Systems Analyst</span>
+            </div>
           </div>
         </div>
-        <div class="path-filter">
-          <div class="goals-title">Career Pathways</div>
-          <div class="chips small"><span>Software Engineer</span><span>Application Developer</span><span>Web Developer</span><span>Mobile App Developer</span><span>Data Analyst</span><span>Data Scientist</span><span>Business Intelligence Analyst</span><span>Security Analyst</span><span>Penetration Tester</span><span>Security Engineer</span><span>AI Engineer</span><span>ML Engineer</span><span>NLP Specialist</span><span>Cloud Engineer</span><span>DevOps Engineer</span><span>Site Reliability Engineer</span><span>System Administrator</span><span>Network Engineer</span></div>
+
+        <!-- Collapsible Goals & Pathways -->
+        <details class="program-accordion">
+          <summary>
+            <span>View Program Goals &amp; Comprehensive Career Pathways</span>
+            <span class="accordion-arrow">▼</span>
+          </summary>
+          <div class="program-accordion-content">
+            <div class="goals-wrapper">
+              <div class="goals-heading">Program Goals</div>
+              <div class="goal-grid">
+                <div class="goal">Apply concepts of computing and mathematics in different domains of computer science.</div>
+                <div class="goal">Design, develop, test and evaluate various solutions using algorithms for complex computing problems that take full advantage of the usability of computer resources.</div>
+                <div class="goal">Document computer-based systems by writing effective reports for risk-assessment impact.</div>
+                <div class="goal">Communicate effectively with computing and non-computer science professionals about computing activities.</div>
+                <div class="goal">Recognize the legal, social, ethical, and professional issues involved in the utilization of computer technology and address these issues.</div>
+                <div class="goal">Engage in continuing professional development through performing independent or collaborative research as computing professionals.</div>
+              </div>
+            </div>
+            <div class="pathways-wrapper">
+              <div class="goals-heading">Career Pathways</div>
+              <div class="chips small">
+                <span>Software Engineer</span><span>Application Developer</span><span>Web Developer</span><span>Mobile App Developer</span><span>Data Analyst</span><span>Data Scientist</span><span>Business Intelligence Analyst</span><span>Security Analyst</span><span>Penetration Tester</span><span>Security Engineer</span><span>AI Engineer</span><span>ML Engineer</span><span>NLP Specialist</span><span>Cloud Engineer</span><span>DevOps Engineer</span><span>Site Reliability Engineer</span><span>System Administrator</span><span>Network Engineer</span>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Curriculum Overview Section -->
+        <div class="curriculum-section">
+          <div class="curriculum-header">
+            <h4>Curriculum Overview</h4>
+            <h3>Official Course Progression</h3>
+            <p>Select a year level below to browse the semester-by-semester courses, laboratory components, and track subjects.</p>
+          </div>
+
+          <!-- Year Level Pills -->
+          <div class="curr-year-nav" role="tablist" aria-label="BSCS Year Levels">
+            <button type="button" class="curr-year-btn on" data-curr-year="y1" role="tab" aria-selected="true">1st Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="y2" role="tab" aria-selected="false">2nd Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="y3" role="tab" aria-selected="false">3rd Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="ys" role="tab" aria-selected="false">Special Term</button>
+            <button type="button" class="curr-year-btn" data-curr-year="y4" role="tab" aria-selected="false">4th Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="ye" role="tab" aria-selected="false">Professional Electives</button>
+          </div>
+
+          <!-- Year 1 Panel -->
+          <div class="curr-year-panel on" data-curr-panel="y1">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">11 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Understanding the Self</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Mathematics in the Modern World</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Introduction to Computing Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Introduction to Computing Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Fundamentals of Programming Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Fundamentals of Programming Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Our Christian Faith and Lasallian Identity</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Physical Fitness and Self Testing Activities</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Towards One Goal: Social Transformation</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Mga Babasahin Hinggil sa Kasaysayan ng Pilipinas</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Student Engagement Program</span></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">10 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">English for Purposive Communication</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Environmental Science</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Diskurso sa Filipino</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Intermediate Programming Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Intermediate Programming Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Object-oriented Programming Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Object-oriented Programming Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Christian Discipleship in the Modem World</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Individual-Dual Sports/Dance</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Community Service by Focus Programs: Health, Education, Livelihood, Pastoral and Self-Govemance (HELPS)</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 2 Panel -->
+          <div class="curr-year-panel" data-curr-panel="y2">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">10 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Art Appreciation</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Entrepreneurial Mindset</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Data Structures and Algorithms Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Data Structures and Algorithms Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Human Computer Interaction Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Human Computer Interaction Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Discrete Structures 1</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Number Theory</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Christian Commitment in ContemporarySociety</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Swimming</span></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">11 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Science, Technology and Society</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Ethics</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Information Management Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Information Management Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Application Development and Emerging Technologies Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Application Development and Emerging Technologies Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Programming Languages Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Programming Languages Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Discrete Structures 2</span></div>
+                  <div class="curr-card"><span class="curr-card-name">The Catholic Social Teaching and Our Social Responsibility</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Team Sports</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 3 Panel -->
+          <div class="curr-year-panel" data-curr-panel="y3">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">Core &amp; Tracks</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">The Contemporary World</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Software Engineering 1</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Information Assurance and Security 1</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Algorithms and Complexity</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Architecture and Organization</span></div>
+
+                  <div class="track-section-divider">Intelligent Systems Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Introduction to Machine Leaming</span><div class="curr-badge-box"><span class="curr-badge track">IS Track</span></div></div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Natural Language Processing</span><div class="curr-badge-box"><span class="curr-badge track">IS Track</span></div></div>
+
+                  <div class="track-section-divider">Game Development Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Introduction to Game Programming</span><div class="curr-badge-box"><span class="curr-badge track">Game Dev</span></div></div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Game Design Principles and Practice</span><div class="curr-badge-box"><span class="curr-badge track">Game Dev</span></div></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">Core &amp; Tracks</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Kursong Rizal</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Social Issues and Professional Practice</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Automata Theory and Formal Languages</span></div>
+                  <div class="curr-card"><span class="curr-card-name">English in the Workplace</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Thesis 1</span></div>
+
+                  <div class="track-section-divider">Intelligent Systems Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Emphatic Computing</span><div class="curr-badge-box"><span class="curr-badge track">IS Track</span></div></div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Computer Vision/Image Processing</span><div class="curr-badge-box"><span class="curr-badge track">IS Track</span></div></div>
+
+                  <div class="track-section-divider">Game Development Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Computer Animation and Simulation</span><div class="curr-badge-box"><span class="curr-badge track">Game Dev</span></div></div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Immersive Game Development</span><div class="curr-badge-box"><span class="curr-badge track">Game Dev</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Term Panel -->
+          <div class="curr-year-panel" data-curr-panel="ys">
+            <div class="special-term-hero">
+              <div class="special-term-content">
+                <h5>Special Term Practicum</h5>
+                <p>Required Industry On-the-Job Training immersion for BS Computer Science students.</p>
+                <div style="margin-top: 10px; font-weight: 600; color: #ffffff;">Practicum (minimum of 240 hours)</div>
+              </div>
+              <span class="special-term-badge">240 Hours Min.</span>
+            </div>
+          </div>
+
+          <!-- Year 4 Panel -->
+          <div class="curr-year-panel" data-curr-panel="y4">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">Core &amp; Tracks</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Software Engineering 2</span></div>
+                  <div class="curr-card"><span class="curr-card-name">CS Professional Elective 1</span><div class="curr-badge-box"><span class="curr-badge elec">ELEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">CS Professional Elective 2</span><div class="curr-badge-box"><span class="curr-badge elec">ELEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Thesis 2</span></div>
+
+                  <div class="track-section-divider">Intelligent Systems Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Machine Learning 2</span><div class="curr-badge-box"><span class="curr-badge track">IS Track</span></div></div>
+
+                  <div class="track-section-divider">Game Development Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Advanced Game Programming</span><div class="curr-badge-box"><span class="curr-badge track">Game Dev</span></div></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">Core &amp; Tracks</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Networks and Communications</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Operating Systems</span></div>
+                  <div class="curr-card"><span class="curr-card-name">CS Professional Elective 3</span><div class="curr-badge-box"><span class="curr-badge elec">ELEC</span></div></div>
+
+                  <div class="track-section-divider">Intelligent Systems Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">Special Topics in Artificial Intelligence</span><div class="curr-badge-box"><span class="curr-badge track">IS Track</span></div></div>
+
+                  <div class="track-section-divider">Game Development Track</div>
+                  <div class="curr-card track-card"><span class="curr-card-name">3D Graphics and Animation</span><div class="curr-badge-box"><span class="curr-badge track">Game Dev</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Electives Panel -->
+          <div class="curr-year-panel" data-curr-panel="ye">
+            <div class="electives-note">
+              <strong>CS Professional Electives:</strong> Students choose three (3) courses aligned with their research and career specialization:
+            </div>
+            <div class="electives-grid">
+              <div class="curr-card"><span class="curr-card-name">Computational Science</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Graphics and Visual Computing</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Parallel and Distributed Computing</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Intelligent Systems</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">System Fundamentals</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- BSIT -->
+      <!-- ========================================================
+           BSIT - BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
+           ======================================================== -->
       <article class="program tab-panel" id="bsit" data-panel="bsit">
+        <!-- Program Header Banner -->
         <div class="program-head">
-          <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-          <div><h3>BS Information Technology (BSIT)</h3><small>Bachelor of Science in Information Technology</small></div>
-        </div>
-        <div class="program-body">
-          <div>
-            <h4>Program Description</h4>
-            <p>The BSIT program focuses on the rigorous training of students with the latest IT concepts and applications. It provides a practical approach to studying the various facets and latest applications of the IT industry, with tracks in <b>Network Technology</b> or <b>Software Technology</b>.</p>
+          <div class="program-head-top">
+            <span class="program-head-badge">Undergraduate Degree &bull; CICS</span>
+            <span class="program-head-abbr">BSIT</span>
           </div>
-          <div>
-            <h4>Curriculum Overview</h4>
-            <div class="years">
-              <div><b>Year 1</b><span class="todo">[Subjects to be added]</span></div>
-              <div><b>Year 2</b><span class="todo">[Subjects to be added]</span></div>
-              <div><b>Year 3</b><span class="todo">[Subjects to be added]</span></div>
-              <div><b>Year 4</b><span class="todo">[Subjects to be added]</span></div>
+          <div class="program-head-main">
+            <div class="program-head-icon">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="program-head-text">
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p class="program-subtitle">Department of Information Technology &bull; De La Salle University &ndash; Dasmari&ntilde;as</p>
             </div>
           </div>
-          <div>
-            <h4>Career Options</h4>
-            <div class="chips"><span>Database Administrator</span><span>IT Entrepreneur</span><span>Information Security Administrator</span><span>IT Instructor</span><span>Programmer</span><span>Trainer / Researcher</span><span>Network Administrator</span><span>Technical Support Specialist</span><span>Web Administrator</span><span>Webmaster</span><span>Web Developer</span><span>Network Engineer</span></div>
+          <div class="program-meta-chips">
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 Years Full-Time</span>
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> PAASCU Level IV Accredited</span>
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> 2 Specialization Tracks</span>
+            <span class="meta-chip"><svg class="chip-ic" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 486-Hour Practicum</span>
           </div>
         </div>
-        <div class="goals">
-          <div class="goals-title">Program Goals</div>
-          <div class="goal-grid">
-            <div class="goal">Apply concepts of computing in different domains of information technology.</div>
-            <div class="goal">Identify and analyze the problem and define the computing requirements appropriate to its solution.</div>
-            <div class="goal">Design, develop, test and evaluate various solutions using modern computing tools for complex computing problems.</div>
-            <div class="goal">Document the computer-based systems by writing effective reports for end-users.</div>
-            <div class="goal">Work effectively as an individual or as a member of a team during software development for company-based systems.</div>
-            <div class="goal">Manage and maintain system security, reliability, and efficiency.</div>
-            <div class="goal">Communicate effectively with the computing community and non-IT professionals about computing activities.</div>
-            <div class="goal">Recognize the legal, social, ethical, and professional issues involved in the utilization of computer technology and address these issues.</div>
-            <div class="goal">Engage in continuing professional development through performing independent or collaborative research as computing professionals.</div>
+
+        <!-- Program Overview: Description & Career Options -->
+        <div class="program-overview">
+          <div class="program-desc-block">
+            <h4>Program Description</h4>
+            <p class="desc-lead">The BSIT program focuses on the rigorous training of students with the latest IT concepts and industry applications.</p>
+            <p>It provides a practical, industry-driven approach to studying the various facets and latest technologies of the IT landscape, supported by cutting-edge laboratory facilities.</p>
+            <div class="specialization-banner">
+              <b>Available Specialization Tracks:</b>
+              <div class="specialization-tags">
+                <span class="spec-tag">Network Technology</span>
+                <span class="spec-tag">Software Technology</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program-careers-block">
+            <h4>Career Opportunities</h4>
+            <p class="careers-sub">Graduates of the BSIT program excel in high-demand roles:</p>
+            <div class="career-pills">
+              <span class="career-pill">Database Administrator</span>
+              <span class="career-pill">IT Entrepreneur</span>
+              <span class="career-pill">Information Security Administrator</span>
+              <span class="career-pill">IT Instructor</span>
+              <span class="career-pill">Programmer</span>
+              <span class="career-pill">Trainer / Researcher</span>
+              <span class="career-pill">Network Administrator</span>
+              <span class="career-pill">Technical Support Specialist</span>
+              <span class="career-pill">Web Administrator</span>
+              <span class="career-pill">Webmaster</span>
+              <span class="career-pill">Web Developer</span>
+              <span class="career-pill">Network Engineer</span>
+            </div>
           </div>
         </div>
-        <div class="path-filter">
-          <div class="goals-title">Career Pathways</div>
-          <div class="chips small"><span>Web Developer</span><span>Front-End Developer</span><span>Back-End Developer</span><span>Full-Stack Developer</span><span>UI/UX Designer</span><span>Mobile App Developer</span><span>SEO Specialist</span><span>Web Analyst</span><span>IT Instructor</span><span>Network Administrator</span><span>Systems Administrator</span><span>Network Engineer</span><span>Cybersecurity Analyst</span><span>IT Support Specialist</span><span>Cloud Engineer</span><span>Database Administrator</span><span>Telecommunications Specialist</span><span>Software Developer</span><span>Programmer</span><span>Data Analyst</span><span>IT Project Manager</span><span>Technical Support Engineer</span><span>IT Trainer</span></div>
+
+        <!-- Collapsible Goals & Pathways -->
+        <details class="program-accordion">
+          <summary>
+            <span>View Program Goals &amp; Comprehensive Career Pathways</span>
+            <span class="accordion-arrow">▼</span>
+          </summary>
+          <div class="program-accordion-content">
+            <div class="goals-wrapper">
+              <div class="goals-heading">Program Goals</div>
+              <div class="goal-grid">
+                <div class="goal">Apply concepts of computing in different domains of information technology.</div>
+                <div class="goal">Identify and analyze the problem and define the computing requirements appropriate to its solution.</div>
+                <div class="goal">Design, develop, test and evaluate various solutions using modern computing tools for complex computing problems.</div>
+                <div class="goal">Document the computer-based systems by writing effective reports for end-users.</div>
+                <div class="goal">Work effectively as an individual or as a member of a team during software development for company-based systems.</div>
+                <div class="goal">Manage and maintain system security, reliability, and efficiency.</div>
+                <div class="goal">Communicate effectively with the computing community and non-IT professionals about computing activities.</div>
+                <div class="goal">Recognize the legal, social, ethical, and professional issues involved in the utilization of computer technology and address these issues.</div>
+                <div class="goal">Engage in continuing professional development through performing independent or collaborative research as computing professionals.</div>
+              </div>
+            </div>
+            <div class="pathways-wrapper">
+              <div class="goals-heading">Career Pathways</div>
+              <div class="chips small">
+                <span>Web Developer</span><span>Front-End Developer</span><span>Back-End Developer</span><span>Full-Stack Developer</span><span>UI/UX Designer</span><span>Mobile App Developer</span><span>SEO Specialist</span><span>Web Analyst</span><span>IT Instructor</span><span>Network Administrator</span><span>Systems Administrator</span><span>Network Engineer</span><span>Cybersecurity Analyst</span><span>IT Support Specialist</span><span>Cloud Engineer</span><span>Database Administrator</span><span>Telecommunications Specialist</span><span>Software Developer</span><span>Programmer</span><span>Data Analyst</span><span>IT Project Manager</span><span>Technical Support Engineer</span><span>IT Trainer</span>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Curriculum Overview Section -->
+        <div class="curriculum-section">
+          <div class="curriculum-header">
+            <h4>Curriculum Overview</h4>
+            <h3>Official Course Progression</h3>
+            <p>Select a year level below to browse the semester-by-semester courses, Cisco certifications, and professional electives.</p>
+          </div>
+
+          <!-- Year Level Pills -->
+          <div class="curr-year-nav" role="tablist" aria-label="BSIT Year Levels">
+            <button type="button" class="curr-year-btn on" data-curr-year="y1" role="tab" aria-selected="true">1st Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="y2" role="tab" aria-selected="false">2nd Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="y3" role="tab" aria-selected="false">3rd Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="ys" role="tab" aria-selected="false">Special Term</button>
+            <button type="button" class="curr-year-btn" data-curr-year="y4" role="tab" aria-selected="false">4th Year</button>
+            <button type="button" class="curr-year-btn" data-curr-year="ye" role="tab" aria-selected="false">Professional Electives</button>
+          </div>
+
+          <!-- Year 1 Panel -->
+          <div class="curr-year-panel on" data-curr-panel="y1">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">11 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Understanding the Self</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Mathematics in the Modern World</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Introduction to Computing Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Introduction to Computing Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Fundamentals of Programming Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Fundamentals of Programming Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Our Christian Faith and Lasallian Identity</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Physical Fitness and Self Testing Activities</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Towards One Goal: Social Transformation.</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Mga Babasahin Hinggil sa Kasaysayan ng Pilipinas</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Student Engagement Program</span></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">10 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">English for Purposive Communication</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Environmental Science</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Diskurso sa Filipino</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Intermediate Programming Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Intermediate Programming Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Fundamentals of Database Systems Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Fundamentals of Database Systems Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Christian Discipleship in the Modem World</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Individual-Dual Sports/Dance</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Community Service by Focus Programs: Health, Education, Livelihood, Pastoral and Self-Governance (HELPS)</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 2 Panel -->
+          <div class="curr-year-panel" data-curr-panel="y2">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">10 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Art Appreciation</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Entrepreneurial Mindset</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Data Structures and Algorithms Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Data Structures and Algorithms Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Human Computer Interaction Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Human Computer Interaction Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Discrete Mathematics</span></div>
+                  <div class="curr-card"><span class="curr-card-name">IT Professional Elective 1</span><div class="curr-badge-box"><span class="curr-badge elec">ELEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Christian Commitment in Contemporary Society</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Swimming</span></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">10 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Science, Technology and Society Ethics</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Information Management Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Information Management Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Application Development and Emerging Technologies Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Application Development and Emerging Technologies Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Quantitative Methods</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Networking 1 Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Networking 1 Lab</span><div class="curr-badge-box"><span class="curr-badge lab">LAB</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">The Catholic Social Teaching and Our Social Responsibility</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Team Sports</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 3 Panel -->
+          <div class="curr-year-panel" data-curr-panel="y3">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">7 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">The Contemporary World</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Information Assurance and Security 1</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Networking 2</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Integrative Programming Technologies 1</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Internet of Things</span></div>
+                  <div class="curr-card track-card"><span class="curr-card-name">CISCO Networking Semester 1</span><div class="curr-badge-box"><span class="curr-badge track">CISCO</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">IT Professional Elective 2</span><div class="curr-badge-box"><span class="curr-badge elec">ELEC</span></div></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">7 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Kursong Rizal</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Social Issues and Professional Practice</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Information Assurance and Security 2</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Systems Integration and Architecture 1</span></div>
+                  <div class="curr-card track-card"><span class="curr-card-name">CISCO Networking Semester 2</span><div class="curr-badge-box"><span class="curr-badge track">CISCO</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">English in the Workplace</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Capstone Project 1</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Term Panel -->
+          <div class="curr-year-panel" data-curr-panel="ys">
+            <div class="special-term-hero">
+              <div class="special-term-content">
+                <h5>Special Term (Mid-Year)</h5>
+                <p>Advanced networking certification modules and focused professional elective coursework.</p>
+                <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 6px;">
+                  <span style="font-weight: 600; color: #ffffff;">&bull; CISCO Networking Semester 3</span>
+                  <span style="font-weight: 600; color: #ffffff;">&bull; IT Professional Elective 3</span>
+                </div>
+              </div>
+              <span class="special-term-badge">2 Intensive Courses</span>
+            </div>
+          </div>
+
+          <!-- Year 4 Panel -->
+          <div class="curr-year-panel" data-curr-panel="y4">
+            <div class="semesters-grid">
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>1st Semester</h5>
+                  <span class="sem-count-badge">5 Courses</span>
+                </div>
+                <div class="subject-list">
+                  <div class="curr-card"><span class="curr-card-name">Systems Administration and Maintenance</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Internet Languages and Tools 2</span></div>
+                  <div class="curr-card"><span class="curr-card-name">Graphic Design</span></div>
+                  <div class="curr-card"><span class="curr-card-name">IT Professional Elective 4</span><div class="curr-badge-box"><span class="curr-badge elec">ELEC</span></div></div>
+                  <div class="curr-card"><span class="curr-card-name">Capstone Project 2</span></div>
+                </div>
+              </div>
+
+              <div class="semester-col">
+                <div class="semester-header">
+                  <h5>2nd Semester</h5>
+                  <span class="sem-count-badge">Internship</span>
+                </div>
+                <div class="special-term-hero" style="height: 100%; border-radius: 14px; padding: 24px;">
+                  <div class="special-term-content">
+                    <h5>Practicum / On-the-Job Training</h5>
+                    <p>Comprehensive industry internship with corporate partner companies across software development, network operations, and enterprise IT.</p>
+                    <div style="margin-top: 12px; font-weight: 700; color: var(--gold);">At least 486 hours minimum</div>
+                  </div>
+                  <span class="special-term-badge">486 Hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Electives Panel -->
+          <div class="curr-year-panel" data-curr-panel="ye">
+            <div class="electives-note">
+              <strong>IT Professional Electives:</strong> Specialization Tracks in <b>Network Technology</b> and <b>Software Technology</b>:
+            </div>
+            <div class="electives-grid">
+              <div class="curr-card"><span class="curr-card-name">Object-oriented Programming Lec</span><div class="curr-badge-box"><span class="curr-badge lec">LEC</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Platform Technologies</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Web Systems and Technologies</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Systems Integration and Architecture 2</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Human Computer Interaction 2</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">Integrative Programming Technologles 2</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+              <div class="curr-card"><span class="curr-card-name">DB2</span><div class="curr-badge-box"><span class="curr-badge elec">Elective</span></div></div>
+            </div>
+          </div>
         </div>
       </article>
     </div>
@@ -189,5 +711,56 @@
 
 <script src="cardnav.js"></script>
 <script src="script.js"></script>
+<script>
+  // Robust Curriculum Year Level Navigation for BSCS and BSIT
+  (() => {
+    function switchYear(btn) {
+      if (!btn) return;
+      const year = btn.getAttribute('data-curr-year') || btn.dataset.currYear;
+      if (!year) return;
+      const program = btn.closest('.program') || btn.closest('[data-panel]');
+      if (!program) return;
+
+      // Update button active state
+      program.querySelectorAll('.curr-year-btn').forEach(b => {
+        const bYear = b.getAttribute('data-curr-year') || b.dataset.currYear;
+        const isActive = (b === btn) || (bYear === year);
+        b.classList.toggle('on', isActive);
+        b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      // Update panel visibility directly and with class
+      program.querySelectorAll('.curr-year-panel').forEach(p => {
+        const pYear = p.getAttribute('data-curr-panel') || p.dataset.currPanel;
+        const match = (pYear === year);
+        p.classList.toggle('on', match);
+        p.style.display = match ? 'block' : 'none';
+      });
+    }
+
+    // Delegated click handler: catches any click on a year button immediately
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('.curr-year-btn');
+      if (btn) {
+        e.preventDefault();
+        switchYear(btn);
+      }
+    });
+
+    // Initialize all programs on load
+    function init() {
+      document.querySelectorAll('.program').forEach(prog => {
+        const activeBtn = prog.querySelector('.curr-year-btn.on') || prog.querySelector('.curr-year-btn');
+        if (activeBtn) switchYear(activeBtn);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
 </body>
 </html>

@@ -17,7 +17,9 @@
 .alt { background: #e9f6ee; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .split p { color: var(--muted); margin-bottom: 16px; }
-.photo { aspect-ratio: 4/3.2; border-radius: 24px; background: linear-gradient(135deg, #d5eee0, #e4f5ea); border: 1px solid var(--line); box-shadow: var(--shadow-lg); display: grid; place-items: center; color: var(--muted); font-size: .9rem; text-align: center; padding: 20px; background-size: cover; background-position: center; }
+.photo { aspect-ratio: 4/3.2; border-radius: 24px; background: linear-gradient(135deg, #d5eee0, #e4f5ea); border: 1px solid var(--line); box-shadow: var(--shadow-lg); display: grid; place-items: center; color: var(--muted); font-size: .9rem; text-align: center; padding: 20px; background-size: cover; background-position: center; overflow: hidden; }
+.photo.has-img { padding: 0; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
 .facts div { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; transition: .25s; }
 .facts div:hover { transform: translateY(-4px); border-color: var(--blue); }
@@ -55,49 +57,669 @@
 .dean cite { font-style: normal; display: block; font-weight: 600; color: var(--navy); }
 .dean cite small { display: block; font-weight: 400; color: var(--muted); }
 
-.org { display: flex; flex-direction: column; align-items: center; }
-.node { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 26px; text-align: center; box-shadow: var(--shadow); min-width: 200px; transition: .3s; }
-.node:hover { transform: translateY(-4px); border-color: var(--blue); }
-.node b { display: block; font-family: "Sora", sans-serif; color: var(--navy); }
-.node span { font-size: .85rem; color: var(--muted); }
-.node.top { background: var(--grad); border: 0; }
-.node.top b, .node.top span { color: #fff; }
-.org .stem { width: 2px; height: 28px; background: var(--blue); opacity: .4; }
-.org .row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; position: relative; padding-top: 28px; }
-.org .row::before { content: ""; position: absolute; top: 0; left: 15%; right: 15%; height: 2px; background: var(--blue); opacity: .4; }
-.org .row .node { position: relative; }
-.org .row .node::before { content: ""; position: absolute; top: -28px; left: 50%; width: 2px; height: 28px; background: var(--blue); opacity: .4; }
+/* Organizational Structure */
+.org-tree { display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: 24px; }
+.org-stem { width: 2px; height: 28px; background: #92d4b2; margin: 0 auto; flex: none; }
+
+.org-node { background: var(--card); border: 1.5px solid #2da66f; border-radius: 16px; padding: 14px 28px; text-align: center; box-shadow: var(--shadow); min-width: 270px; transition: .3s; }
+.org-node:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.org-node b { display: block; font-family: "Sora", sans-serif; color: var(--navy); font-size: 1.02rem; }
+.org-node span { font-size: .85rem; color: var(--muted); }
+
+.org-node.org-dean { background: linear-gradient(145deg, #073823, #0b5936); border: none; padding: 16px 36px; min-width: 290px; }
+.org-node.org-dean .org-role { display: block; font: 800 .72rem "Sora", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #5ef1a8; margin-bottom: 4px; }
+.org-node.org-dean b { color: #ffffff; font-size: 1.15rem; }
+
+.org-node.org-chair { min-width: 270px; }
+.org-node.org-chair span { margin-top: 3px; display: block; }
+
+.org-branch-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%; max-width: 1060px; position: relative; padding-top: 28px; }
+.org-branch-wrap::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: #92d4b2; }
+
+.org-col { display: flex; flex-direction: column; align-items: center; position: relative; width: 100%; }
+.org-col::before { content: ""; position: absolute; top: -28px; left: 50%; transform: translateX(-50%); width: 2px; height: 28px; background: #92d4b2; }
+
+/* Faculty Detailed Cards */
+.org-card { background: #ffffff; border: 2px solid #0c8a4c; border-radius: 22px; padding: 28px 30px 28px; width: 100%; box-shadow: 0 10px 30px rgba(6,35,26,.05); text-align: left; transition: transform .3s, box-shadow .3s; }
+.org-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(6,35,26,.09); }
+
+.org-card-head { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 16px; border-bottom: 1px solid #e5eee8; margin-bottom: 20px; }
+.org-card-head h3 { font: 800 1.32rem "Sora", sans-serif; color: var(--navy); margin-bottom: 3px; }
+.org-card-head p { font-size: .85rem; color: var(--muted); margin: 0; }
+.org-card-badge { background: #d7f5e5; color: #086938; font: 700 .78rem "Sora", sans-serif; padding: 6px 14px; border-radius: 999px; white-space: nowrap; flex: none; margin-left: 14px; }
+
+.org-sec-title { display: flex; align-items: center; gap: 12px; font: 800 .72rem "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #0c8a4c; margin: 18px 0 10px; }
+.org-sec-title::after { content: ""; flex: 1; height: 1px; background: #eaf1ed; }
+
+.org-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; margin-bottom: 6px; }
+.org-member { font-size: .88rem; color: var(--navy); line-height: 1.5; padding: 3px 0; display: flex; align-items: center; gap: 6px; }
+.org-deg-tag { font: 700 .75rem "Sora", sans-serif; color: #0b8a52; margin-left: 2px; }
+
+.org-btn { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #0c8a4c; color: #0c8a4c; padding: 9px 22px; border-radius: 999px; font: 700 .85rem "Sora", sans-serif; text-decoration: none; margin-top: 22px; transition: .25s; }
+.org-btn:hover { background: #0c8a4c; color: #ffffff; transform: translateY(-2px); }
+
+@media (max-width: 860px) {
+  .org-branch-wrap { grid-template-columns: 1fr; gap: 40px; padding-top: 0; }
+  .org-branch-wrap::before, .org-col::before { display: none; }
+  .org-card { padding: 24px 20px; }
+}
+
+@media (max-width: 480px) {
+  .org-grid-2 { grid-template-columns: 1fr; }
+  .org-node.org-dean, .org-node.org-chair { min-width: 0; width: 100%; }
+}
 
 .logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-bottom: 36px; }
-.logo-box { height: 110px; border: 1.5px dashed #a9cdb8; border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; text-align: center; color: var(--muted); font-size: .85rem; padding: 10px; transition: .3s; }
+.logo-box { min-height: 125px; height: auto; border: 1.5px dashed #a9cdb8; border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; text-align: center; color: var(--muted); font-size: .85rem; padding: 16px 14px; transition: .3s; }
 .logo-box:hover { border-color: var(--blue); background: #fff; transform: translateY(-4px); }
-.logo-box b { display: block; color: var(--navy); font-family: "Sora", sans-serif; }
+.logo-box .acc-logo { height: 42px; max-width: 140px; width: auto; object-fit: contain; margin: 0 auto 10px; display: block; }
+.logo-box b { display: block; color: var(--navy); font-family: "Sora", sans-serif; margin-bottom: 3px; }
 .acc-title { font: 700 .8rem "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin: 8px 0 14px; }
 
-/* Programs */
-.program { background: var(--card); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); overflow: hidden; margin-bottom: 32px; }
-.program-head { display: flex; align-items: center; gap: 20px; padding: 32px 40px; background: var(--grad); color: #fff; }
-.program-head .ic { width: 60px; height: 60px; border-radius: 18px; background: rgba(255,255,255,.18); display: grid; place-items: center; font-size: 1.8rem; flex: none; }
-.program-head h3 { font-size: 1.6rem; }
-.program-head small { opacity: .85; font-size: .9rem; display: block; }
-.program-body { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 36px; padding: 40px; }
-.program-body h4, .goals-title { font: 700 .78rem "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
-.program-body p { color: var(--muted); font-size: .95rem; margin-bottom: 12px; }
-.years { display: grid; gap: 10px; }
-.years div { display: flex; gap: 12px; align-items: baseline; background: var(--tint-2); border-radius: 12px; padding: 10px 14px; font-size: .9rem; color: var(--text); border: 1px solid transparent; transition: .25s; }
-.years div:hover { border-color: var(--blue); transform: translateX(4px); }
-.years b { font-family: "Sora", sans-serif; color: var(--blue); min-width: 52px; }
-.years .todo { color: var(--muted); font-style: italic; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chips span { background: var(--tint); color: var(--blue); font-size: .85rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; transition: .2s; cursor: default; }
-.chips span:hover { background: var(--blue); color: #fff; transform: translateY(-2px); }
-.chips.small span { font-size: .78rem; padding: 6px 11px; }
-.goals { padding: 0 40px 40px; }
-.goal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; counter-reset: goal; }
-.goal { counter-increment: goal; position: relative; background: var(--tint-2); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 18px 62px; font-size: .9rem; color: var(--text); transition: .25s; }
-.goal::before { content: counter(goal); position: absolute; left: 18px; top: 16px; width: 30px; height: 30px; border-radius: 9px; background: var(--grad); color: #fff; display: grid; place-items: center; font: 700 .85rem "Sora", sans-serif; }
-.goal:hover { background: #fff; border-color: var(--blue); transform: translateY(-4px); box-shadow: var(--shadow); }
-.path-filter { padding: 0 40px 40px; }
+/* ============================================================
+   ACADEMIC PROGRAMS - MODERN CURRICULUM & DEGREE UI
+   ============================================================ */
+
+#undergraduate {
+  background: var(--bg);
+  position: relative;
+}
+
+/* Top Program Switcher Tabs */
+.program-switcher {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.program-switcher-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font: 600 .95rem "Sora", sans-serif;
+  border: 1.5px solid var(--line);
+  background: #ffffff;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: 0 4px 14px rgba(6, 35, 26, 0.04);
+}
+.program-switcher-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform .25s ease;
+}
+.program-switcher-btn:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 138, 82, 0.12);
+}
+.program-switcher-btn.on {
+  background: linear-gradient(135deg, #0b8a52 0%, #0d9488 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(11, 138, 82, 0.28);
+}
+.program-switcher-btn.on svg {
+  transform: scale(1.1);
+}
+
+/* Program Card Container */
+.program {
+  background: #ffffff;
+  border: 1px solid rgba(11, 138, 82, 0.16);
+  border-radius: 28px;
+  box-shadow: 0 20px 48px -12px rgba(6, 35, 26, 0.08);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* Program Header Banner */
+.program-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 38px 44px;
+  background: linear-gradient(135deg, #052618 0%, #0a3d24 55%, #0d4a2d 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+.program-head::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(110, 231, 183, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.program-head-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.program-head-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 700 .72rem "Sora", sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: rgba(110, 231, 183, 0.12);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.program-head-abbr {
+  font: 800 .9rem "Sora", sans-serif;
+  letter-spacing: .08em;
+  color: var(--gold);
+  background: rgba(245, 197, 66, 0.14);
+  border: 1px solid rgba(245, 197, 66, 0.3);
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+.program-head-main {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.program-head-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  display: grid;
+  place-items: center;
+  font-size: 1.9rem;
+  flex: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+.program-head-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: #ffffff;
+}
+.program-head-text h3 {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+.program-head-text .program-subtitle {
+  color: #b0d4c0;
+  font-size: .95rem;
+}
+.program-meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2f4ea;
+  font-size: .8rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.meta-chip svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--cyan);
+  fill: none;
+  stroke-width: 2;
+}
+
+/* Program Description & Career Options Grid */
+.program-overview {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  padding: 40px 44px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+.program-desc-block h4,
+.program-careers-block h4,
+.curriculum-header h4 {
+  font: 700 .78rem "Sora", sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.program-desc-block p {
+  color: var(--muted);
+  font-size: .96rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.program-desc-block .desc-lead {
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 1.02rem;
+}
+.specialization-banner {
+  background: var(--tint-2);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-top: 18px;
+}
+.specialization-banner b {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.specialization-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.spec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid rgba(11, 138, 82, 0.25);
+  color: var(--navy);
+  font-size: .82rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+.spec-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+/* Careers Pills */
+.program-careers-block .careers-sub {
+  color: var(--muted);
+  font-size: .88rem;
+  margin-bottom: 14px;
+}
+.career-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.career-pill {
+  background: var(--tint);
+  border: 1px solid rgba(11, 138, 82, 0.18);
+  color: #064024;
+  font-size: .84rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 999px;
+  transition: all .2s ease;
+  cursor: default;
+}
+.career-pill:hover {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 138, 82, 0.22);
+}
+
+/* Collapsible Program Goals & Pathways */
+.program-accordion {
+  border-bottom: 1px solid var(--line);
+  background: #fbfdfc;
+}
+.program-accordion summary {
+  padding: 16px 44px;
+  font: 600 .88rem "Sora", sans-serif;
+  color: var(--blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  transition: background .2s ease;
+}
+.program-accordion summary:hover {
+  background: var(--tint-2);
+}
+.program-accordion[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+.program-accordion .accordion-arrow {
+  transition: transform .25s ease;
+  font-size: .85rem;
+}
+.program-accordion[open] .accordion-arrow {
+  transform: rotate(180deg);
+}
+.program-accordion-content {
+  padding: 32px 44px;
+  animation: fadeUp .25s ease;
+}
+.goals-wrapper {
+  margin-bottom: 28px;
+}
+.goals-heading {
+  font: 700 .78rem "Sora", sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+/* ============================================================
+   CURRICULUM OVERVIEW SECTION (PILLS & CARDS)
+   ============================================================ */
+
+.curriculum-section {
+  padding: 40px 44px 48px;
+  background: #ffffff;
+}
+.curriculum-header {
+  margin-bottom: 26px;
+}
+.curriculum-header h3 {
+  font-size: 1.45rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.curriculum-header p {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* Year Level Pill Navigation */
+.curr-year-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 6px;
+  background: #f0f7f3;
+  border-radius: 999px;
+  width: fit-content;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.curr-year-btn {
+  font: 600 .86rem "Sora", sans-serif;
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #375344;
+  cursor: pointer;
+  transition: all .2s ease;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: auto;
+}
+.curr-year-btn:hover {
+  color: var(--blue);
+  background: rgba(255, 255, 255, 0.7);
+}
+.curr-year-btn.on {
+  background: #0b8a52;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(11, 138, 82, 0.28);
+}
+
+/* Curriculum Year Panels */
+.curr-year-panel {
+  display: none;
+}
+.curr-year-panel.on {
+  display: block;
+  animation: fadeUp .3s ease;
+}
+
+/* Semesters Grid */
+.semesters-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.semester-col {
+  display: flex;
+  flex-direction: column;
+}
+.semester-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #f4f9f6;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+.semester-header h5 {
+  font: 700 .9rem "Sora", sans-serif;
+  color: var(--navy);
+  margin: 0;
+}
+.sem-count-badge {
+  font: 600 .72rem "Inter", sans-serif;
+  color: var(--blue);
+  background: #ffffff;
+  border: 1px solid rgba(11, 138, 82, 0.2);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+/* Subject Cards List */
+.subject-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.curr-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #e1ebe4;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all .2s ease;
+  box-shadow: 0 2px 6px rgba(6, 35, 26, 0.02);
+}
+.curr-card:hover {
+  border-color: var(--blue);
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(11, 138, 82, 0.08);
+}
+.curr-card-name {
+  font-size: .91rem;
+  font-weight: 500;
+  color: #12261c;
+  line-height: 1.35;
+  flex: 1;
+}
+.curr-badge-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+}
+.curr-badge {
+  font: 700 .68rem "JetBrains Mono", monospace;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  line-height: 1;
+}
+.curr-badge.lec {
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+.curr-badge.lab {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+.curr-badge.track {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  font-family: "Sora", sans-serif;
+  font-size: .65rem;
+  font-weight: 600;
+}
+.curr-badge.elec {
+  background: #f5f3ff;
+  color: #5b21b6;
+  border: 1px solid #ddd6fe;
+  font-family: "Sora", sans-serif;
+  font-size: .65rem;
+  font-weight: 600;
+}
+
+/* Track Section Headers within Year 3 / Year 4 */
+.track-section-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 10px;
+  font: 700 .75rem "Sora", sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #074726;
+}
+.track-section-divider::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.curr-card.track-card {
+  background: #fbfdfc;
+  border-left: 3px solid #f5c542;
+}
+
+/* Special Term Card */
+.special-term-hero {
+  background: linear-gradient(135deg, #073820 0%, #0d5635 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 12px 30px rgba(6, 35, 26, 0.12);
+}
+.special-term-content h5 {
+  font: 700 1.25rem "Sora", sans-serif;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+.special-term-content p {
+  color: #b9e0cb;
+  font-size: .95rem;
+  margin: 0;
+}
+.special-term-badge {
+  font: 700 .85rem "Sora", sans-serif;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: rgba(245, 197, 66, 0.18);
+  border: 1px solid rgba(245, 197, 66, 0.4);
+  color: var(--gold);
+  padding: 8px 18px;
+  border-radius: 999px;
+  flex: none;
+}
+
+/* Electives Grid */
+.electives-note {
+  background: var(--tint-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: .9rem;
+  color: var(--navy);
+  margin-bottom: 18px;
+}
+.electives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+/* ============================================================
+   RESPONSIVE LAYOUT
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .program-head, .program-overview, .curriculum-section, .program-accordion-content {
+    padding: 30px 28px;
+  }
+  .program-overview {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .program-head, .program-overview, .curriculum-section, .program-accordion-content {
+    padding: 24px 20px;
+  }
+  .program-head-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .semesters-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .curr-year-nav {
+    border-radius: 16px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 6px;
+  }
+  .special-term-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+  }
+}
 
 .mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
 .mini { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); transition: .3s; }

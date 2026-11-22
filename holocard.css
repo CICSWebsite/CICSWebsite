@@ -46,12 +46,27 @@
 #directory.js-holo .hc-hint { display: block; }
 #directory.js-holo .fac-grid { display: none; }
 
-.hc-cell { position: relative; aspect-ratio: 630 / 880; border-radius: 14px; outline: none; cursor: pointer; box-shadow: var(--shadow); transition: box-shadow .3s; }
+.hc-cell { position: relative; aspect-ratio: 630 / 880; border-radius: 14px; outline: none; cursor: pointer; box-shadow: var(--shadow); transition: box-shadow .3s; overflow: hidden; }
 .hc-cell[hidden] { display: none; }
 .hc-cell:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
 .hc-cell.active { z-index: 5; box-shadow: none; }
 .hc-img { display: block; width: 100%; height: 100%; border-radius: 14px; object-fit: cover; user-select: none; -webkit-user-drag: none; }
 .hc-cell.active .hc-img { visibility: hidden; }
+.hc-photo {
+  position: absolute;
+  left: 8.89%;
+  top: 19.09%;
+  width: 82.22%;
+  height: 45.45%;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid #ffc233;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity .2s;
+}
+.hc-cell.active .hc-photo { opacity: 0; }
 .hc-live { position: absolute; inset: 0; }
 .hc-live .holo-card { width: 100%; }
 
