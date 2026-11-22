@@ -348,7 +348,7 @@
                     { label: 'Facebook', href: 'https://www.facebook.com/DLSUD.CICSSG', external: true },
                     { label: 'Instagram', href: 'https://www.instagram.com/dlsud.cicssg/', external: true }] }
         ],
-        cta: { label: 'Apply Now', href: 'https://web.dlsud.edu.ph/admissions/online-application', external: true },
+        cta: { label: 'Apply Now', href: 'services.html#enrollment' },
         theme: 'dark', surface: 'glass', openOn: 'click', cardEffect: 'rise',
         stagger: 0.12, bounce: 0.2, speed: 1, cardHeight: 176, maxWidth: 820,
         accentColor: '#ffc233', menuLabel: true, intro: true,
