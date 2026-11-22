@@ -57,18 +57,57 @@
 .dean cite { font-style: normal; display: block; font-weight: 600; color: var(--navy); }
 .dean cite small { display: block; font-weight: 400; color: var(--muted); }
 
-.org { display: flex; flex-direction: column; align-items: center; }
-.node { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 26px; text-align: center; box-shadow: var(--shadow); min-width: 200px; transition: .3s; }
-.node:hover { transform: translateY(-4px); border-color: var(--blue); }
-.node b { display: block; font-family: "Sora", sans-serif; color: var(--navy); }
-.node span { font-size: .85rem; color: var(--muted); }
-.node.top { background: var(--grad); border: 0; }
-.node.top b, .node.top span { color: #fff; }
-.org .stem { width: 2px; height: 28px; background: var(--blue); opacity: .4; }
-.org .row { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; position: relative; padding-top: 28px; }
-.org .row::before { content: ""; position: absolute; top: 0; left: 15%; right: 15%; height: 2px; background: var(--blue); opacity: .4; }
-.org .row .node { position: relative; }
-.org .row .node::before { content: ""; position: absolute; top: -28px; left: 50%; width: 2px; height: 28px; background: var(--blue); opacity: .4; }
+/* Organizational Structure */
+.org-tree { display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: 24px; }
+.org-stem { width: 2px; height: 28px; background: #92d4b2; margin: 0 auto; flex: none; }
+
+.org-node { background: var(--card); border: 1.5px solid #2da66f; border-radius: 16px; padding: 14px 28px; text-align: center; box-shadow: var(--shadow); min-width: 270px; transition: .3s; }
+.org-node:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.org-node b { display: block; font-family: "Sora", sans-serif; color: var(--navy); font-size: 1.02rem; }
+.org-node span { font-size: .85rem; color: var(--muted); }
+
+.org-node.org-dean { background: linear-gradient(145deg, #073823, #0b5936); border: none; padding: 16px 36px; min-width: 290px; }
+.org-node.org-dean .org-role { display: block; font: 800 .72rem "Sora", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #5ef1a8; margin-bottom: 4px; }
+.org-node.org-dean b { color: #ffffff; font-size: 1.15rem; }
+
+.org-node.org-chair { min-width: 270px; }
+.org-node.org-chair span { margin-top: 3px; display: block; }
+
+.org-branch-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%; max-width: 1060px; position: relative; padding-top: 28px; }
+.org-branch-wrap::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: #92d4b2; }
+
+.org-col { display: flex; flex-direction: column; align-items: center; position: relative; width: 100%; }
+.org-col::before { content: ""; position: absolute; top: -28px; left: 50%; transform: translateX(-50%); width: 2px; height: 28px; background: #92d4b2; }
+
+/* Faculty Detailed Cards */
+.org-card { background: #ffffff; border: 2px solid #0c8a4c; border-radius: 22px; padding: 28px 30px 28px; width: 100%; box-shadow: 0 10px 30px rgba(6,35,26,.05); text-align: left; transition: transform .3s, box-shadow .3s; }
+.org-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(6,35,26,.09); }
+
+.org-card-head { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 16px; border-bottom: 1px solid #e5eee8; margin-bottom: 20px; }
+.org-card-head h3 { font: 800 1.32rem "Sora", sans-serif; color: var(--navy); margin-bottom: 3px; }
+.org-card-head p { font-size: .85rem; color: var(--muted); margin: 0; }
+.org-card-badge { background: #d7f5e5; color: #086938; font: 700 .78rem "Sora", sans-serif; padding: 6px 14px; border-radius: 999px; white-space: nowrap; flex: none; margin-left: 14px; }
+
+.org-sec-title { display: flex; align-items: center; gap: 12px; font: 800 .72rem "Sora", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #0c8a4c; margin: 18px 0 10px; }
+.org-sec-title::after { content: ""; flex: 1; height: 1px; background: #eaf1ed; }
+
+.org-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; margin-bottom: 6px; }
+.org-member { font-size: .88rem; color: var(--navy); line-height: 1.5; padding: 3px 0; display: flex; align-items: center; gap: 6px; }
+.org-deg-tag { font: 700 .75rem "Sora", sans-serif; color: #0b8a52; margin-left: 2px; }
+
+.org-btn { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #0c8a4c; color: #0c8a4c; padding: 9px 22px; border-radius: 999px; font: 700 .85rem "Sora", sans-serif; text-decoration: none; margin-top: 22px; transition: .25s; }
+.org-btn:hover { background: #0c8a4c; color: #ffffff; transform: translateY(-2px); }
+
+@media (max-width: 860px) {
+  .org-branch-wrap { grid-template-columns: 1fr; gap: 40px; padding-top: 0; }
+  .org-branch-wrap::before, .org-col::before { display: none; }
+  .org-card { padding: 24px 20px; }
+}
+
+@media (max-width: 480px) {
+  .org-grid-2 { grid-template-columns: 1fr; }
+  .org-node.org-dean, .org-node.org-chair { min-width: 0; width: 100%; }
+}
 
 .logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-bottom: 36px; }
 .logo-box { min-height: 125px; height: auto; border: 1.5px dashed #a9cdb8; border-radius: 18px; background: rgba(255,255,255,.7); display: grid; place-items: center; text-align: center; color: var(--muted); font-size: .85rem; padding: 16px 14px; transition: .3s; }
