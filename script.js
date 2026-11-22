@@ -156,6 +156,31 @@
     };
     btns.forEach(b => b.addEventListener('click', () => box.activate(b.dataset.tab)));
   });
+
+  /* Curriculum Year Level Navigation: .curr-year-nav button[data-curr-year] -> .curr-year-panel[data-curr-panel] */
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.curr-year-btn');
+    if (!btn) return;
+    const year = btn.getAttribute('data-curr-year') || btn.dataset.currYear;
+    if (!year) return;
+    const program = btn.closest('.program') || btn.closest('[data-panel]');
+    if (!program) return;
+    e.preventDefault();
+
+    program.querySelectorAll('.curr-year-btn').forEach(b => {
+      const bYear = b.getAttribute('data-curr-year') || b.dataset.currYear;
+      const isActive = (b === btn) || (bYear === year);
+      b.classList.toggle('on', isActive);
+      b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    program.querySelectorAll('.curr-year-panel').forEach(p => {
+      const pYear = p.getAttribute('data-curr-panel') || p.dataset.currPanel;
+      const match = (pYear === year);
+      p.classList.toggle('on', match);
+      p.style.display = match ? 'block' : 'none';
+    });
+  });
   const openHash = () => {
     const id = location.hash.slice(1); if (!id) return;
     const panel = $(`[data-panel="${id}"]`);
