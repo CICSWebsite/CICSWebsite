@@ -22,7 +22,7 @@
     ['Doctor, Juanito C.', 'IT', ['Bachelor of Science in Computer Science', 'Masters in Information Technology'], 'juanito-doctor-695757360/'],
     ['Gatpandan, Paulino H., DIT', 'IT', ['Bachelor of Science in Computer Science', 'Master in Business Administration', 'Master of Science in Computer Science', 'Doctor in Information Technology'], 'paulino-gatpandan-9b6a17259/'],
     ['Mayuga, Emelyn D.', 'IT', ['Bachelor of Science in Secretarial Administration Major in Computer Education', 'Master of Arts in Education Major in Computer Aided Information'], 'emelyn-mayuga-aa7ab466/'],
-    ['Mitschek, Marivic R.', 'IT', ['Bachelor of Science in Computer Science', 'Masters in Information Technology'], 'marivic-mitschek-996643a7/'],
+    ['Mitschek, Marivic R.', 'IT', ['Bachelor of Science in Computer Science', 'Masters in Information Technology'], 'marivic-mitschek-996643a7/', 'photos/faculty/mitschek.png'],
     ['Mojica, Azenith R.', 'IT', ['Bachelor of Science in Computer Science', 'Masters in Information Technology'], 'azenith-mojica-130bb4147/'],
     ['Naz, Sherry B.', 'IT', ['Bachelor of Science in Computer Science', 'Masters in Information Technology'], 'sherry-naz-47140b208/'],
     ['Pamintuan, Evangeline G.', 'IT', ['Bachelor of Science in Computer Science', 'Masters in Information Technology'], 'evangeline-pamintuan-861ba258/'],
@@ -35,12 +35,12 @@
     ['Galo, Michael C.', 'IT', ['Bachelor of Science in Information Technology'], 'michael-galo-350a9558/'],
     ['Galve, Arnold B.', 'IT', ['Bachelor of Science in Computer Science', 'Masters in Information Technology'], 'arnold-galve-184b71143/'],
     ['Lina, Maria Patricia B.', 'IT', ['Bachelor of Science in Computer Science']]
-  ].map(([name, prog, deg, li]) => {
+  ].map(([name, prog, deg, li, photo]) => {
     const all = deg.join(' ').toLowerCase();
     const lvl = /doctor|phd/.test(all) ? 'Doctorate' : /master/.test(all) ? "Master's" : "Bachelor's";
     const clean = name.replace(/, DIT$/, '');
     const [last, first] = clean.split(', ');
-    return { name, prog, deg, lvl, li: li ? LI + li : null, ini: (first[0] + last[0]).toUpperCase(), prof: prog === 'CS' ? 'Computer Science' : 'Information Technology' };
+    return { name, prog, deg, lvl, li: li ? LI + li : null, photo: photo || null, ini: (first[0] + last[0]).toUpperCase(), prof: prog === 'CS' ? 'Computer Science' : 'Information Technology' };
   });
 
   const grid = document.querySelector('.fac-grid'), q = document.getElementById('q'), count = document.getElementById('facCount'), empty = document.querySelector('.empty');
@@ -49,7 +49,7 @@
 
   grid.innerHTML = F.map((f, i) => `
     <button class="fac" data-i="${i}" data-prog="${f.prog}" data-lvl="${f.lvl}" aria-label="View ${f.name}">
-      <div class="pic"><div class="av-lg">${f.ini}</div></div>
+      <div class="pic"><div class="av-lg">${f.photo ? `<img src="${f.photo}" alt="${f.name}">` : f.ini}</div></div>
       <div class="info">
         <h3>${f.name}</h3>
         <div class="pos">Faculty, ${f.prof}</div>
