@@ -207,3 +207,21 @@ footer .container { display: flex; justify-content: space-between; flex-wrap: wr
 svg.i { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .ic, .icon, .club .top { color: #fff; }
 .val .ic, .mini .ic, .ach-item .icon, .acc summary .ic, .float .ic { color: var(--blue); }
+
+/* Career chips inside track cards (spacing fix) */
+.mini .more-info .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.mini .more-info .chips span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--blue);
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
