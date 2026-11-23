@@ -433,6 +433,11 @@
   color: var(--blue);
   margin-bottom: 14px;
 }
+.pathways-wrapper .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
 /* ============================================================
    CURRICULUM OVERVIEW SECTION (PILLS & CARDS)

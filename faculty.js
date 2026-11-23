@@ -43,6 +43,10 @@
     return { name, prog, deg, lvl, li: li ? (li.startsWith('http') ? li : LI + li) : null, photo: photo || null, altPhoto: altPhoto || null, ini: (first[0] + last[0]).toUpperCase(), prof: prog === 'CS' ? 'Computer Science' : 'Information Technology' };
   });
 
+  // Photos pre-built by build-photos.html (works even when the page is opened as a file)
+  const EMBED = window.FACULTY_PHOTOS || {};
+  const embedded = f => EMBED[f.photo] || (f.altPhoto && EMBED[f.altPhoto]) || null;
+
   const avatarHtml = f => f.photo ?
     `<span>${f.ini}</span><img src="${f.photo}" alt="${f.name}" style="display:none"${f.altPhoto ? ` data-alt="${f.altPhoto}"` : ''} onload="this.style.display='block';if(this.previousElementSibling)this.previousElementSibling.style.display='none'" onerror="if(!this.dataset.t&&this.dataset.alt){this.dataset.t='1';this.src=this.dataset.alt}else{this.remove()}">` :
     f.ini;
@@ -112,7 +116,7 @@
       const clipId = 'picClip_' + Math.random().toString(36).slice(2, 8);
       const portrait = photoUri ?
         '<defs><clipPath id="' + clipId + '"><rect x="56" y="168" width="518" height="400" rx="18"/></clipPath></defs>' +
-        '<image href="' + photoUri + '" x="56" y="168" width="518" height="400" preserveAspectRatio="xMidYMid slice" clip-path="url(#' + clipId + ')"/>' :
+        '<image href="' + photoUri + '" x="56" y="168" width="518" height="400" preserveAspectRatio="xMidYMin slice" clip-path="url(#' + clipId + ')"/>' :
         '<circle cx="315" cy="318" r="86" fill="#ffffff" fill-opacity=".9"/>' +
         '<path d="M140 568c0-96 76-152 175-152s175 56 175 152z" fill="#ffffff" fill-opacity=".9"/>';
 
@@ -134,18 +138,61 @@
       return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
     };
 
-    // ---- Click: large holographic card with the full educational background ----
     const holoRoot = document.getElementById('holoCard'), holoInfo = document.getElementById('holoInfo'), holoClose = document.getElementById('holoClose');
-    let holo = null, lastFocus = null, closing = 0;
+    let holo = null, holoIndex = -1, lastFocus = null, closing = 0;
     const live = []; // cells that currently own a WebGL context, oldest first
     const MAX_LIVE = 4;
-    const art = F.map(f => cardArt(f, null));
+    // Cards start with the photo already inside the art when photos-data.js is present
+    const art = F.map(f => cardArt(f, embedded(f)));
     const shine = { preset: 'gold', foilColor: '#e2e6ec', intensity: 0.48, scale: 1, edgeSparkle: 0.45, frame: 4, glare: 0.28, tiltMax: 14, hoverScale: 1.04, radius: 14, width: 320, shadow: true };
 
+    // ---- Fallback when photos-data.js is missing: read the photo through a canvas (needs http://, not file://) ----
+    const toDataUri = url => new Promise(resolve => {
+      if (!url) return resolve(null);
+      const img = new Image();
+      img.onload = () => {
+        try {
+          const max = 720;
+          const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+          const c = document.createElement('canvas');
+          c.width = Math.max(1, Math.round(img.naturalWidth * s));
+          c.height = Math.max(1, Math.round(img.naturalHeight * s));
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          resolve(c.toDataURL('image/png'));
+        } catch (err) {
+          console.warn('[faculty] Could not put the photo on the card. Run build-photos.html and add photos-data.js next to faculty.html.', url);
+          resolve(null);
+        }
+      };
+      img.onerror = () => resolve(null);
+      img.src = url;
+    });
+
+    // Puts the photo into the card art (grid card, hover card and popup) and removes the separate overlay photo
+    const artJobs = [];
+    const ensureArt = i => artJobs[i] || (artJobs[i] = (async () => {
+      const f = F[i];
+      if (!f.photo || embedded(f)) return;
+      let uri = await toDataUri(f.photo);
+      if (!uri && f.altPhoto) uri = await toDataUri(f.altPhoto);
+      if (!uri) return;
+      art[i] = cardArt(f, uri);
+      if (cells[i]) {
+        const staticImg = cells[i].querySelector('.hc-img');
+        if (staticImg) staticImg.src = art[i];
+        const overlay = cells[i].querySelector('.hc-photo');
+        if (overlay) overlay.remove();
+        if (cells[i]._holo) cells[i]._holo.setImage(art[i]);
+      }
+      if (holoIndex === i && holo) holo.setImage(art[i]);
+    })());
+
+    // ---- Click: large holographic card with the full educational background ----
     openHolo = i => {
       const f = F[i];
       clearTimeout(closing);
       lastFocus = document.activeElement;
+      holoIndex = i;
       live.slice().forEach(deactivateNow); // free the grid's contexts while the popup is open
       holoInfo.innerHTML = '<span class="field">' + esc(f.prof) + '</span><span class="field lvl">' + esc(f.lvl) + '</span>' +
         '<h3>' + esc(disp(f)) + '</h3><div class="pos">Faculty, ' + esc(f.prof) + '</div>' +
@@ -159,9 +206,11 @@
       document.body.style.overflow = 'hidden';
       requestAnimationFrame(() => holoModal.classList.add('show'));
       holoClose.focus();
+      ensureArt(i);
     };
     const closeHolo = () => {
       if (!holoModal.classList.contains('open')) return;
+      holoIndex = -1;
       holoModal.classList.remove('show');
       holoModal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
@@ -192,25 +241,6 @@
     };
     const deactivate = cell => { clearTimeout(cell._t); cell._t = setTimeout(() => deactivateNow(cell), 550); };
 
-    const toDataUri = url => new Promise(resolve => {
-      if (!url) return resolve(null);
-      const img = new Image();
-      img.onload = () => {
-        try {
-          const c = document.createElement('canvas');
-          c.width = img.naturalWidth;
-          c.height = img.naturalHeight;
-          const ctx = c.getContext('2d');
-          ctx.drawImage(img, 0, 0);
-          resolve(c.toDataURL('image/png'));
-        } catch {
-          resolve(null);
-        }
-      };
-      img.onerror = () => resolve(null);
-      img.src = url;
-    });
-
     F.forEach((f, i) => {
       const cell = document.createElement('div');
       cell.className = 'hc-cell';
@@ -222,7 +252,8 @@
       const liveEl = document.createElement('div');
       liveEl.className = 'hc-live';
       cell.append(img, liveEl);
-      if (f.photo) {
+      // Separate overlay photo only when the photo is not already inside the card art
+      if (f.photo && !embedded(f)) {
         const photo = document.createElement('img');
         photo.className = 'hc-photo';
         photo.src = f.photo;
@@ -248,19 +279,8 @@
       cells.push(cell);
     });
 
-    F.forEach(async (f, i) => {
-      if (!f.photo) return;
-      let uri = await toDataUri(f.photo);
-      if (!uri && f.altPhoto) uri = await toDataUri(f.altPhoto);
-      if (uri) {
-        art[i] = cardArt(f, uri);
-        if (cells[i]) {
-          const staticImg = cells[i].querySelector('.hc-img');
-          if (staticImg) staticImg.src = art[i];
-          if (cells[i]._holo) cells[i]._holo.setImage(art[i]);
-        }
-      }
-    });
+    // Photos not covered by photos-data.js get embedded in the background (works over http://)
+    F.forEach((f, i) => { ensureArt(i); });
 
     document.getElementById('directory').classList.add('js-holo');
   })();
